@@ -1,0 +1,24 @@
+{
+  "name": "therapie-motio",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@tailwindcss/vite": "^4.1.18",
+    "gsap": "^3.14.2",
+    "jquery": "^3.7.1",
+    "slick-carousel": "^1.8.1",
+    "tailwindcss": "^4.1.18"
+  },
+  "devDependencies": {
+    "path": "^0.12.7",
+    "vite": "^7.3.1"
+  }
+}
