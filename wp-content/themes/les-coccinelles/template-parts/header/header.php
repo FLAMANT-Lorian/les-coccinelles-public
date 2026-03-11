@@ -23,7 +23,7 @@ $facebook = $social_networks['facebook'];
                 </svg>
             </a>
             <input type="checkbox" id="burger-menu" class="peer sr-only burger-menu-input rg:hidden">
-            <label for="burger-menu"
+            <label aria-expanded="true" for="burger-menu"
                    class="burger-menu-label peer-focus-visible:outline peer-focus-visible:outline-orange-500"
                    aria-label="Ouvrir le menu">
                 <span class="sr-only">Ouvrir le menu</span>
@@ -32,7 +32,7 @@ $facebook = $social_networks['facebook'];
                 <span class="line line-3"></span>
             </label>
         </div>
-        <div class="nav-container max-rg:absolute max-rg:z-1 max-rg:h-svh max-rg:inset-0 trans-all max-rg:px-default max-rg:pb-6 max-rg:pt-24 max-rg:bg-beige-medium max-rg:flex max-rg:flex-col max-rg:gap-10">
+        <div aria-hidden="false" class="nav-container max-rg:absolute max-rg:z-1 max-rg:h-svh max-rg:inset-0 trans-all max-rg:px-default max-rg:pb-6 max-rg:pt-24 max-rg:bg-beige-medium max-rg:flex max-rg:flex-col max-rg:gap-10">
             <?= wp_nav_menu([
                     'theme_location' => 'primary',
                     'container' => false,
