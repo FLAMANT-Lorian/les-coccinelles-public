@@ -1,1 +1,10 @@
 @import "tailwindcss";
+
+@import "./custom/theme.css";
+@import "./custom/reset.css";
+@import "./custom/utilities.css";
+@import "./custom/font.css";
+
+@import "./parts/menu/menu.css";
+@import './parts/banner/hero.css';
+@import './parts/services/services.css';

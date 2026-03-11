@@ -1,5 +1,7 @@
 <?php get_header(); ?>
 
-<h1 class="">COUCOU</h1>
+<?= get_template_part('template-parts/banner/hero') ?>
+<?= get_template_part('template-parts/about/about') ?>
+<?= get_template_part('template-parts/services/services') ?>
 
 <?php get_footer(); ?>

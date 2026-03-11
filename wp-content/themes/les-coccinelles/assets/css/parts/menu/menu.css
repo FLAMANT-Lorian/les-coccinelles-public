@@ -1,0 +1,50 @@
+.burger-menu-label {
+    @apply flex flex-col gap-2.5 cursor-pointer rg:hidden;
+
+    .line {
+        @apply inline-block w-14 bg-brown h-px trans-all origin-center;
+    }
+}
+
+.nav-container {
+    @apply max-rg:-translate-y-full max-rg:opacity-0 trans-all;
+}
+
+.header-menu:has(.burger-menu-input:checked) {
+    @apply bg-beige-medium trans-all;
+
+    .burger-menu-label {
+
+        .line-1 {
+            @apply translate-y-2.75 rotate-45;
+        }
+
+        .line-2 {
+            @apply scale-x-0;
+        }
+
+        .line-3 {
+            @apply -translate-y-2.75 -rotate-45;
+        }
+    }
+
+    & ~ .nav-container {
+        @apply translate-y-0 opacity-100;
+    }
+}
+
+.primary-nav {
+    @apply flex justify-center items-center grow;
+
+    .menu-item {
+        @apply text-brown text-3xl rg:text-lg;
+
+        a {
+            @apply px-2 py-1;
+        }
+
+        &.current-menu-item {
+            @apply text-red;
+        }
+    }
+}

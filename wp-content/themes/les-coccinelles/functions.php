@@ -13,7 +13,8 @@ function les_coccinelles_theme_setup(): void
     ]);
 }
 
-include "inc/inc.vite.php";
-include 'inc/cpts.php';
+require_once 'inc/inc.vite.php';
+require_once 'inc/cpts.php';
+require_once 'custom/custom.php';
 
 add_action('after_setup_theme', 'les_coccinelles_theme_setup');

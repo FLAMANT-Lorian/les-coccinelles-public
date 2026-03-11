@@ -1,0 +1,11 @@
+.service-item {
+    &:has(a:hover) {
+        .btn-services:after {
+            @apply rotate-0;
+        }
+
+        img {
+            @apply scale-110;
+        }
+    }
+}
