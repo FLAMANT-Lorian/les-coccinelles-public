@@ -11,7 +11,7 @@ $facebook = $social_networks['facebook'];
        class="px-4 py-2 bg-brown text-white absolute top-4 -left-full focus:left-4 trans-all">
         Aller au contenu principal
     </a>
-    <div class="max-width-screen relative rg:flex rg:flex-row rg:justify-between rg:items-center rg:gap-x-10 rg:px-default rg:py-6">
+    <div class="header-menu max-width-screen relative rg:flex rg:flex-row rg:justify-between rg:items-center rg:gap-x-10 rg:px-default rg:py-6">
         <div class="relative z-2 header-menu max-rg:px-default max-rg:py-6 flex flex-row justify-between items-center">
             <a href="<?= home_url() ?>"
                aria-label="Vers la page d’accueil"
