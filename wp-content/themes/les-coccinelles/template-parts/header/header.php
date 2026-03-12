@@ -32,7 +32,7 @@ $facebook = $social_networks['facebook'];
                 <span class="line line-3"></span>
             </label>
         </div>
-        <div aria-hidden="false" class="nav-container max-rg:absolute max-rg:z-1 max-rg:h-svh max-rg:inset-0 trans-all max-rg:px-default max-rg:pb-6 max-rg:pt-24 max-rg:bg-beige-medium max-rg:flex max-rg:flex-col max-rg:gap-10">
+        <nav aria-label="Navigation principale" aria-hidden="false" class="nav-container max-rg:absolute max-rg:z-1 max-rg:h-svh max-rg:inset-0 trans-all max-rg:px-default max-rg:pb-6 max-rg:pt-24 max-rg:bg-beige-medium max-rg:flex max-rg:flex-col max-rg:gap-10">
             <?= wp_nav_menu([
                     'theme_location' => 'primary',
                     'container' => false,
@@ -68,6 +68,6 @@ $facebook = $social_networks['facebook'];
                     <?php endif; ?>
                 </div>
             <?php endif; ?>
-        </div>
+        </nav>
     </div>
 </header>

@@ -9,8 +9,8 @@ $image_position = $text_media['image-position'];
 
 ?>
 
-<section>
-    <div class="py-default px-default grid-default gap-y-10 rg:items-center text-brown">
+<section class="rg:bg-leaf-to-bottom-left rg:bg-no-repeat rg:bg-position-[top_-80px_right_-80px]">
+    <div class="max-width-screen py-default px-default grid-default gap-y-10 rg:items-center text-brown">
         <div class="flex flex-col items-start col-span-full rg:col-span-4 rl:col-span-3 lg:col-span-5 <?= $image_position === 'right' ? 'rg:col-start-1' : 'rg:col-start-5 lg:col-start-8' ?>">
             <?php if ($title): ?>
                 <h2 class="text-2xl font-medium pb-3 rg:pb-4"><?= $title ?></h2>

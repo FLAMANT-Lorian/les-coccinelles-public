@@ -12,6 +12,7 @@
     --color-beige-medium: #EFE6DC;
     --color-beige-dark: #A89F96;
     --color-gray: #6C6D6E;
+    --color-green: #3A9740;
 
     /* BREAKPOINTS */
     --breakpoint-sm: 460px;
@@ -33,6 +34,8 @@
     --text-3xl--line-height: clamp(2.375rem, 5vw, 2.875rem);
     --text-2xl: clamp(1.5rem, 3vw, 2.5rem); /* 24 -> 40*/
     --text-2xl--line-height: clamp(1.875rem, 3vw, 2.875rem);
+    --text-2xl-fixed: 1.5rem; /* 24 */
+    --text-2xl-fixed--line-height: 1.875rem;
     --text-xl: 1.25rem; /* 20 */
     --text-xl--line-height: 1.625rem;
     --text-lg: 1.125rem; /* 18 */
@@ -43,4 +46,10 @@
     --text-sm--line-height: 1.25rem;
     --text-xs: 0.75rem; /* 12 */
     --text-xs--line-height: 1.125rem;
+
+    /* Background-image */
+    --background-image-leaf-to-top-right: url('/wp-content/themes/les-coccinelles/assets/img/svgs/leaf-bg-to-top-right.svg');
+    --background-image-leaf-to-bottom-left: url('/wp-content/themes/les-coccinelles/assets/img/svgs/leaf-bg-to-bottom-left.svg');
+    --background-image-leaf-to-top-left: url('/wp-content/themes/les-coccinelles/assets/img/svgs/leaf-bg-to-top-left.svg');
+    --background-image-leaf-to-bottom-right: url('/wp-content/themes/les-coccinelles/assets/img/svgs/leaf-bg-to-right.svg');
 }

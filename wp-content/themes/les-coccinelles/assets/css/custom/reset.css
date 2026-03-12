@@ -1,3 +1,15 @@
 * {
     @apply font-family-mona-sans;
 }
+
+.dots {
+    @apply flex items-center justify-center gap-4;
+
+    .dot {
+        @apply w-4 h-2.5 bg-beige-dark/60;
+
+        &.active {
+            @apply bg-red;
+        }
+    }
+}

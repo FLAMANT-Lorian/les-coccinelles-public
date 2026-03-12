@@ -37,7 +37,7 @@
     @apply flex justify-center items-center grow;
 
     .menu-item {
-        @apply text-brown text-3xl rg:text-lg;
+        @apply text-brown text-3xl rg:text-xl;
 
         a {
             @apply px-2 py-1;
