@@ -27,12 +27,14 @@ $image = $cta['background-image'];
                     </a>
                 <?php endif; ?>
             </div>
-            <div class="absolute inset-0 opacity-30">
-                <?= wp_get_attachment_image($image['ID'], '1536x1536', attr: [
-                        'class' => 'w-full h-full object-cover',
-                        'alt' => $image['alt']
-                ]) ?>
-            </div>
+            <?php if ($image): ?>
+                <div class="absolute inset-0 opacity-30">
+                    <?= wp_get_attachment_image($image['ID'], '1536x1536', attr: [
+                            'class' => 'w-full h-full object-cover',
+                            'alt' => $image['alt']
+                    ]) ?>
+                </div>
+            <?php endif; ?>
         </div>
     </div>
 </section>

@@ -13,15 +13,12 @@ import {settings as s} from "../settings";
         },
 
         setup() {
-            this.burgerMenuLabel.setAttribute('aria-expanded', 'false');
             this.navContainer.setAttribute('aria-hidden', 'true');
         },
 
         handleAccessibility() {
             this.burgerMenuCheckbox.addEventListener('change', e => {
                 let ariaHiddenAttr = !e.currentTarget.checked;
-                let ariaExpandedAttr = e.currentTarget.checked;
-                this.burgerMenuLabel.setAttribute('aria-expanded', ariaExpandedAttr.toString());
                 this.navContainer.setAttribute('aria-hidden', ariaHiddenAttr.toString());
             });
         }

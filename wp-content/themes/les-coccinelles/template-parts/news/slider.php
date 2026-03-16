@@ -29,7 +29,7 @@ $index = 1;
             </div>
             <div class="news-dots dots col-span-full rg:hidden!">
                 <?php foreach ($news->posts as $index => $news): ?>
-                    <div aria-hidden="true" class="dot cursor-pointer md:even:hidden" id="<?= $index + 1 ?>"></div>
+                    <div aria-hidden="true" class="dot cursor-pointer md:even:hidden" data-id="<?= $index + 1 ?>"></div>
                 <?php endforeach; ?>
             </div>
             <a href="<?= get_post_type_archive_link($cpt_news['cpt_name']) ?>"

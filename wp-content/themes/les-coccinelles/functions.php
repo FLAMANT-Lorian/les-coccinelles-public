@@ -8,7 +8,7 @@ function les_coccinelles_theme_setup(): void
     add_theme_support('post-thumbnails');
     register_nav_menus([
         'primary' => __('Menu principal', 'les_coccinelles'),
-        'footer' => __('Menu footer', 'les_coccinelles'),
+        'footer' => __('Menu secondaire', 'les_coccinelles'),
         'rgpd' => __('Menu rgpd', 'les_coccinelles'),
     ]);
 }

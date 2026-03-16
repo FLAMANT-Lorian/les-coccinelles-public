@@ -23,7 +23,7 @@
 
 /* FONT */
 @utility paragraph {
-    @apply text-gray text-lg rg:text-xl font-normal;
+    @apply text-gray text-base rg:text-lg font-normal;
 }
 
 /* BUTTON */

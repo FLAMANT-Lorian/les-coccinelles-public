@@ -16,7 +16,7 @@ import {settings as s} from "../settings";
             this.dots.forEach(dot => {
                dot.addEventListener('click', e => {
                    e.preventDefault();
-                   const card = document.getElementById(dot.id);
+                   const card = document.getElementById(dot.dataset.id);
                    console.log(card);
                    card.scrollIntoView({
                        behavior: 'smooth'

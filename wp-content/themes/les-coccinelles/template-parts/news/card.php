@@ -13,19 +13,27 @@ $date = get_the_date('d / m / Y');
 <article
         class="news-card relative border border-beige-dark min-w-[calc(100vw-48px)] md:min-w-[calc((100vw-128px)/2)] rg:min-w-auto snap-center"
         id="<?= $index ?>">
-    <div class="max-h-60 lg:max-h-70 overflow-hidden">
-        <?= $thumbnail ?>
-    </div>
+    <?php if ($thumbnail): ?>
+        <div class="max-h-60 lg:max-h-70 overflow-hidden">
+            <?= $thumbnail ?>
+        </div>
+    <?php endif; ?>
     <div class="p-4 rg:p-6 bg-white">
-        <span class="flex flex-row gap-2 items-center mb-2">
+        <?php if ($date): ?>
+            <span class="flex flex-row gap-2 items-center mb-2">
             <svg class="text-green" width="24" height="24" viewBox="0 0 24 24" fill="none"
                  xmlns="http://www.w3.org/2000/svg">
                 <use xlink:href="#leaf"></use>
             </svg>
             <span class="text-gray text-base font-normal"><?= $date ?></span>
         </span>
-        <h3 class="text-xl rg:text-2xl-fixed font-medium mb-3"><?= $title ?></h3>
-        <p class="text-base text-gray rg:text-lg line-clamp-3 mb-4"><?= $excerpt ?></p>
+        <?php endif; ?>
+        <?php if ($title): ?>
+            <h3 class="text-xl rg:text-2xl-fixed font-medium mb-3"><?= $title ?></h3>
+        <?php endif; ?>
+        <?php if ($excerpt): ?>
+            <p class="text-base text-gray rg:text-lg line-clamp-3 mb-4"><?= $excerpt ?></p>
+        <?php endif; ?>
         <span class="text-base text-red font-medium">En savoir plus</span>
     </div>
     <a class="absolute inset-0 z-1"

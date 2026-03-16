@@ -23,9 +23,8 @@ $facebook = $social_networks['facebook'];
                 </svg>
             </a>
             <input type="checkbox" id="burger-menu" class="peer sr-only burger-menu-input rg:hidden">
-            <label aria-expanded="true" for="burger-menu"
-                   class="burger-menu-label peer-focus-visible:outline peer-focus-visible:outline-orange-500"
-                   aria-label="Ouvrir le menu">
+            <label for="burger-menu"
+                   class="burger-menu-label peer-focus-visible:outline peer-focus-visible:outline-orange-500">
                 <span class="sr-only">Ouvrir le menu</span>
                 <span class="line line-1"></span>
                 <span class="line line-2"></span>
