@@ -8,5 +8,8 @@ export const settings = {
     newsSlider: {
         'dots_class': '.dot',
         'active_dot_class': 'active'
+    },
+    fancybox: {
+        'gallery_dataset': '[data-fancybox]',
     }
 }

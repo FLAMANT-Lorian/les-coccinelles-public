@@ -2,7 +2,7 @@
 
 @import "./custom/theme.css";
 @import "./custom/reset.css";
-@import "./custom/utilities.css";
+@import "./utilities/utilities.css";
 @import "./custom/font.css";
 
 @import "./parts/menu/menu.css";
@@ -11,4 +11,4 @@
 @import './parts/news/news.css';
 @import './parts/footer/footer.css';
 @import './parts/history/history.css';
-
+@import './parts/fancybox/fancybox.css';

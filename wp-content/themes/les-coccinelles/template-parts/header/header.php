@@ -8,8 +8,14 @@ $facebook = $social_networks['facebook'];
     <a href="#content"
        aria-label="Aller au contenu principal"
        title="Aller au contenu principal"
-       class="px-4 py-2 bg-brown text-white absolute top-4 -left-full focus:left-4 trans-all">
+       class="px-4 py-2 bg-brown text-white fixed z-10 top-4 -left-full focus:left-4 trans-all">
         Aller au contenu principal
+    </a>
+    <a href="#footer"
+       aria-label="Aller au pied de page"
+       title="Aller au pied de page"
+       class="px-4 py-2 bg-brown text-white fixed z-10 top-4 -left-full focus:left-4 trans-all">
+        Aller au pied de page
     </a>
     <div class="header-menu max-width-screen relative rg:flex rg:flex-row rg:justify-between rg:items-center rg:gap-x-10 rg:px-default rg:py-6">
         <div class="relative z-2 header-menu max-rg:px-default max-rg:py-6 flex flex-row justify-between items-center">

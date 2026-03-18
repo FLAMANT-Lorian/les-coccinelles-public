@@ -12,7 +12,7 @@ $facebook = $social_networks['facebook'];
 
 ?>
 
-<footer class="bg-brown">
+<footer class="bg-brown" id="footer">
     <h2 class="sr-only">Pied de page</h2>
     <div class="max-width-screen px-default py-12 grid-default gap-y-10 lg:gap-y-16">
         <div class="flex flex-col gap-6 col-span-4">
@@ -75,7 +75,7 @@ $facebook = $social_networks['facebook'];
                 <?php endif; ?>
             </ul>
         </div>
-        <nav class="max-md:sr-only footer-nav col-span-4 lg:col-span-3">
+        <nav aria-label="Navigation secondaire" class="max-md:sr-only footer-nav col-span-4 lg:col-span-3">
             <h3>Navigation</h3>
             <?= wp_nav_menu([
                     'theme_location' => 'footer',
@@ -83,7 +83,7 @@ $facebook = $social_networks['facebook'];
                     'menu_class' => 'flex flex-col gap-4',
             ]); ?>
         </nav>
-        <nav class="footer-nav col-span-4 lg:col-span-2">
+        <nav aria-label="Navigation rgpd" class="footer-nav col-span-4 lg:col-span-2">
             <h3 class="max-md:hidden">Rgpd</h3>
             <?= wp_nav_menu([
                     'theme_location' => 'rgpd',

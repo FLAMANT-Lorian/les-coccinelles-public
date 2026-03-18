@@ -1,0 +1,4 @@
+/* ANIMATION */
+@utility trans-all {
+    @apply transition-all ease-in-out duration-400;
+}

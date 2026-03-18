@@ -1,0 +1,8 @@
+/* FONT */
+@utility paragraph {
+    @apply text-gray text-base rg:text-lg font-normal;
+}
+
+@utility text-big {
+    @apply text-2xl md:text-3xl lg:text-4.5xl font-medium;
+}
