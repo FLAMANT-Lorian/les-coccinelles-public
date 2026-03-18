@@ -129,7 +129,7 @@ $facebook = $social_networks['facebook'];
             <?php endif; ?>
         </div>
         <div class="col-span-4 md:col-span-8 lg:col-span-12 flex flex-col md:flex-row md:justify-between gap-5 justify-center items-center pt-4 border-t border-t-white/60">
-            <hspan class="paragraph text-white opacity-60">© ASBL Les Coccinelles <?= date('Y') ?></hspan>
+            <span class="paragraph text-white opacity-60">© ASBL Les Coccinelles <?= date('Y') ?></span>
             <div class="flex flex-row items-center gap-2 paragraph text-white">
                 <span class="opacity-60">Site réalisé par</span>
                 <a aria-label="Vers le site web de Lorian Flamant"
