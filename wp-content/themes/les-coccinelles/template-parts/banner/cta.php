@@ -13,7 +13,7 @@ $image = $cta['background-image'];
         <div class="relative grid-default px-6 md:px-0 py-default col-span-full bg-brown">
             <div class="relative z-1 col-span-full md:col-start-2 md:col-span-6 lg:col-start-3 lg:col-span-8 flex flex-col items-center text-center text-white">
                 <?php if ($title): ?>
-                    <h2 class="text-3xl font-medium mb-4"><?= $title ?></h2>
+                    <h2 class="text-3xl lg:text-4.5xl font-medium mb-4"><?= $title ?></h2>
                 <?php endif; ?>
                 <?php if ($text): ?>
                     <p class="text-white paragraph mb-12"><?= $text ?></p>

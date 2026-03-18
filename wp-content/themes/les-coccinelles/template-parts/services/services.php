@@ -11,7 +11,7 @@ $items = $services['services'];
     <div class="max-width-screen px-default py-default grid-default gap-y-10">
         <div class="text-center col-span-full lg:col-start-4 lg:col-span-6">
             <?php if ($title): ?>
-                <h2 class="text-brown text-2xl font-medium pb-3"><?= $title ?></h2>
+                <h2 class="text-brown text-big pb-3"><?= $title ?></h2>
             <?php endif; ?>
             <?php if ($content): ?>
                 <div class="paragraph">

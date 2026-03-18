@@ -10,6 +10,7 @@ import {settings as s} from "../settings";
         init() {
             this.setup();
             this.handleAccessibility();
+            this.closeMenuOnEscape();
         },
 
         setup() {
@@ -20,6 +21,13 @@ import {settings as s} from "../settings";
             this.burgerMenuCheckbox.addEventListener('change', e => {
                 let ariaHiddenAttr = !e.currentTarget.checked;
                 this.navContainer.setAttribute('aria-hidden', ariaHiddenAttr.toString());
+            });
+        },
+        closeMenuOnEscape() {
+            addEventListener('keydown', e => {
+                if (e.key === 'Escape') {
+                    this.burgerMenuCheckbox.checked = false;
+                }
             });
         }
     };

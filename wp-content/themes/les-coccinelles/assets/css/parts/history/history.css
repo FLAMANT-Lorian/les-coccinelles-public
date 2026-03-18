@@ -1,0 +1,56 @@
+.history-section {
+    @apply relative;
+
+    &:before {
+        @apply rg:content-[''] rg:absolute rg:w-3 rg:h-0.5 rg:bg-red rg:left-1/2 rg:-translate-x-1/2 rg:top-16 lg:top-24;
+    }
+
+    &:after {
+        @apply rg:content-[''] rg:absolute rg:w-3 rg:h-3 rg:border-l-2 rg:border-b-2 rg:border-red rg:-rotate-45 rg:left-1/2 rg:-translate-x-1/2 rg:bottom-16 lg:bottom-24;
+    }
+}
+
+.history {
+    @apply relative;
+
+    &:after {
+        @apply rg:content-[''] rg:absolute rg:-z-1 rg:top-1/2 rg:-translate-y-1/2 rg:left-1/2 rg:-translate-x-1/2 h-full rg:w-0.5 rg:bg-red;
+    }
+
+    .history-card {
+        @apply md:items-center;
+
+        &:nth-child(odd) {
+
+            div {
+                @apply rg:col-span-4;
+            }
+
+            > div:first-child {
+                @apply md:col-start-6 md:col-span-3 rg:col-start-7;
+            }
+
+            time {
+                @apply md:left-4 md:right-auto rg:right-auto rg:top-1/2 rg:-translate-y-1/2 rg:left-1/2 rg:-translate-x-1/2 h-fit;
+            }
+
+            > div:last-child {
+                @apply md:col-start-1 md:row-start-1;
+            }
+        }
+
+        &:nth-child(even) {
+            > div:first-child {
+                @apply md:col-start-1 md:col-span-3;
+            }
+
+            time {
+                @apply md:right-4 rg:right-auto md:left-auto rg:top-1/2 rg:-translate-y-1/2 rg:left-1/2 rg:-translate-x-1/2 h-fit;
+            }
+
+            > div:last-child {
+                @apply md:col-start-5 rg:col-start-7 md:row-start-1;
+            }
+        }
+    }
+}

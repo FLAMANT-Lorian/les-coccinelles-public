@@ -16,6 +16,8 @@
     
     get_template_part('template-parts/header/header');
     
+    get_template_part('template-parts/breadcrumb/breadcrumb');
+    
     if (defined('IS_VITE_DEVELOPMENT') && IS_VITE_DEVELOPMENT === true) :
         get_template_part('template-parts/tools/breakpoints');
     endif;

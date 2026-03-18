@@ -34,7 +34,7 @@
 }
 
 .primary-nav {
-    @apply flex justify-center items-center grow;
+    @apply flex flex-col gap-7.5 rg:flex-row rg:gap-8 justify-center items-center grow;
 
     .menu-item {
         @apply text-brown text-3xl rg:text-xl;

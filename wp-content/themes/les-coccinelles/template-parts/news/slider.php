@@ -18,7 +18,7 @@ $index = 1;
     <section class="bg-beige-medium news-slider">
         <div class="max-width-screen px-default py-default grid-default gap-y-8 rg:gap-y-12">
             <?php if ($title): ?>
-                <h2 class="col-span-full text-center text-brown text-2xl font-medium"><?= $title ?></h2>
+                <h2 class="col-span-full text-center text-brown text-big"><?= $title ?></h2>
             <?php endif; ?>
             <div class="news-track col-span-full flex flex-row gap-4 overflow-x-scroll snap-mandatory snap-x">
                 <?php while ($news->have_posts()): $news->the_post(); ?>

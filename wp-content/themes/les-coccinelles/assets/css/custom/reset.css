@@ -13,3 +13,7 @@
         }
     }
 }
+
+body:has(.burger-menu-input:checked) {
+    @apply overflow-hidden;
+}

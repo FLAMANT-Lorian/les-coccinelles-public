@@ -26,6 +26,10 @@
     @apply text-gray text-base rg:text-lg font-normal;
 }
 
+@utility text-big {
+    @apply text-2xl md:text-3xl lg:text-4.5xl font-medium;
+}
+
 /* BUTTON */
 @utility btn {
     @apply text-brown text-lg rg:text-xl uppercase font-normal px-4 rg:px-6 py-3 rg:py-4 trans-all;

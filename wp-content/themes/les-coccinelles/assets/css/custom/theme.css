@@ -30,22 +30,8 @@
     --text-banner-title--line-height: clamp(2.375rem, 5vw, 4.375rem);
     --text-banner-text: clamp(1.125rem, 2vw, 1.5rem); /* 18 -> 24 */
     --text-banner-text--line-height: clamp(1.5rem, 2vw, 1.875rem);
-    --text-3xl: clamp(2rem, 5vw, 2.5rem); /* 32 -> 40 */
-    --text-3xl--line-height: clamp(2.375rem, 5vw, 2.875rem);
-    --text-2xl: clamp(1.5rem, 3vw, 2.5rem); /* 24 -> 40*/
-    --text-2xl--line-height: clamp(1.875rem, 3vw, 2.875rem);
-    --text-2xl-fixed: 1.5rem; /* 24 */
-    --text-2xl-fixed--line-height: 1.875rem;
-    --text-xl: 1.25rem; /* 20 */
-    --text-xl--line-height: 1.625rem;
-    --text-lg: 1.125rem; /* 18 */
-    --text-lg--line-height: 1.5rem;
-    --text-base: 1rem; /* 16 */
-    --text-base--line-height: 1.375rem;
-    --text-sm: 0.875rem; /* 14 */
-    --text-sm--line-height: 1.25rem;
-    --text-xs: 0.75rem; /* 12 */
-    --text-xs--line-height: 1.125rem;
+    --text-4\.5xl: 2.5rem;
+    --text-2\.5xl: 2rem;
 
     /* Background-image */
     --background-image-leaf-to-top-right: url('/wp-content/themes/les-coccinelles/assets/img/svgs/leaf-bg-to-top-right.svg');
