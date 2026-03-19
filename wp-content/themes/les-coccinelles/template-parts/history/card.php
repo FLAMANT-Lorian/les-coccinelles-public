@@ -16,18 +16,24 @@ $item = $args['history_item'] ?? false;
                 </div>
             <?php endif; ?>
         </div>
-        <?php if ($item['year']): ?>
-            <time datetime="<?= $item['year']; ?>"
-                  class="absolute bottom-4 right-4 px-2 py-1 bg-red text-white "><?= $item['year']; ?></time>
-        <?php endif; ?>
-        <?php if ($item['image']): ?>
-            <div class="col-span-full md:col-span-4">
-                <?= wp_get_attachment_image($item['image']['ID'], 'large', attr: [
-                        'class' => 'max-h-64 rg:max-h-80 w-full object-cover',
-                        'alt' => $item['image']['alt'],
-                ]); ?>
-            </div>
-        <?php endif; ?>
+        <div class="col-span-full md:col-span-4 max-rg:relative">
+            <?php if ($item['year']): ?>
+                <time datetime="<?= $item['year']; ?>"
+                      class="absolute z-1 bottom-4 right-4 px-2 py-1 bg-red text-white "><?= $item['year']; ?></time>
+            <?php endif; ?>
+            <?php if ($item['image']): ?>
+                <a href="<?= $item['image']['url'] ?>"
+                   data-fancybox="history-item"
+                   title="Voir l’image en grand"
+                   aria-label="Voir l’image en grand">
+                    <span class="sr-only">Voir l’image en grand</span>
+                    <?= wp_get_attachment_image($item['image']['ID'], 'large', attr: [
+                            'class' => 'max-h-64 rg:max-h-80 w-full object-cover',
+                            'alt' => $item['image']['alt'],
+                    ]); ?>
+                </a>
+            <?php endif; ?>
+        </div>
     </div>
 
 <?php endif; ?>

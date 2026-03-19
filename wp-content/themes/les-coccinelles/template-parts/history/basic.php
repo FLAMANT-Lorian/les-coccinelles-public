@@ -4,7 +4,7 @@ $history_items = get_field('history');
 
 ?>
 
-<section class="history-section bg-leaf-to-top-right bg-position-[top_110px_left_-110px] bg-no-repeat">
+<section class="history-section rg:bg-leaf-to-top-right rg:bg-position-[top_110px_left_-110px] rg:bg-no-repeat">
     <div class="max-width-screen px-default py-default">
         <h2 class="sr-only">Historique de l’asbl Les Coccinelles</h2>
         <?php if ($history_items): ?>

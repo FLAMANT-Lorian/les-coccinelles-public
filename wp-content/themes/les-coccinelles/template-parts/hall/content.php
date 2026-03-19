@@ -7,9 +7,9 @@ $index = 1;
 ?>
 
 <?php if (have_rows($term)): ?>
-    <section>
+    <section class="rg:bg-leaf-to-top-left rg:bg-no-repeat rg:bg-position-[bottom_110px_right_-110px]">
+        <h2 class="sr-only">Informations sur la salle</h2>
         <div class="max-width-screen grid-default px-default py-default lg:pt-0 lg:pb-24 divide-y divide-beige-dark/60">
-            <h2 class="sr-only">Informations sur la salle</h2>
             <?php while (have_rows($term)): the_row(); ?>
                 
                 <?php

@@ -1,4 +1,4 @@
-.fancybox-image {
+[data-fancybox] {
     @apply relative cursor-pointer;
 
     &::after {
