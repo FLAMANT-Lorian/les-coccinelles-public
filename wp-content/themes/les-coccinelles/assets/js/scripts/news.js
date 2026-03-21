@@ -2,7 +2,7 @@ const searchNewsInput = document.querySelector('.news-search-input input');
 const newsWrapper = document.querySelector('.news-wrapper');
 
 if (searchNewsInput) {
-    addEventListener('DOMContentLoaded', e => {
+    addEventListener('DOMContentLoaded', () => {
 
         searchNewsInput.addEventListener('input', async e => {
 
