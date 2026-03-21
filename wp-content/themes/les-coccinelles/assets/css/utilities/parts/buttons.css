@@ -1,13 +1,12 @@
 /* BUTTON */
 @utility btn {
-    @apply text-brown text-lg rg:text-xl uppercase font-normal px-4 rg:px-6 py-3 rg:py-4 trans-all;
+    @apply text-brown text-lg uppercase font-normal px-4 rg:px-6 py-3 rg:py-4 trans-all;
 }
 
 @utility btn-primary-outlined {
     @apply btn border border-red flex flex-row items-center gap-4;
 
     &:after {
-        content: "";
         @apply content-[''] mask-[url('/wp-content/themes/les-coccinelles/assets/img/svgs/arrow.svg')] mask-no-repeat mask-center h-3.25 w-7 mask-contain inline-block bg-brown trans-all;
     }
 
@@ -24,7 +23,6 @@
     @apply btn border border-red bg-red text-white flex flex-row items-center gap-4;
 
     &:after {
-        content: "";
         @apply content-[''] mask-[url('/wp-content/themes/les-coccinelles/assets/img/svgs/arrow.svg')] mask-no-repeat mask-center h-3.25 w-7 mask-contain inline-block bg-white trans-all;
     }
 
@@ -32,6 +30,22 @@
         @apply bg-transparent text-brown;
 
         &:after {
+            @apply bg-brown;
+        }
+    }
+}
+
+@utility btn-back-filled {
+    @apply btn border border-red bg-red text-white flex flex-row items-center gap-4;
+
+    &:before {
+        @apply content-[''] mask-[url('/wp-content/themes/les-coccinelles/assets/img/svgs/arrow.svg')] mask-no-repeat rotate-180 mask-center h-3.25 w-7 mask-contain inline-block bg-white trans-all;
+    }
+
+    &:hover {
+        @apply bg-transparent text-brown;
+
+        &:before {
             @apply bg-brown;
         }
     }
@@ -55,7 +69,6 @@
     @apply btn border border-white bg-white text-brown flex flex-row items-center gap-4;
 
     &:after {
-        content: "";
         @apply content-[''] mask-[url('/wp-content/themes/les-coccinelles/assets/img/svgs/arrow.svg')] mask-no-repeat mask-center h-3.25 w-7 mask-contain inline-block bg-brown trans-all;
     }
 

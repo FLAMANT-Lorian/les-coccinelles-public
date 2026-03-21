@@ -17,3 +17,23 @@
 body:has(.burger-menu-input:checked) {
     @apply overflow-hidden;
 }
+
+ul.page-numbers {
+    @apply flex flex-row col-span-full justify-center gap-6 mt-6;
+
+    .page-numbers {
+        @apply px-4 text-brown border border-red h-10  flex justify-center items-center trans-all;
+
+        &:hover, &.current {
+            @apply bg-red text-white;
+        }
+    }
+
+    a, span {
+        @apply w-10;
+    }
+
+    .next, .prev {
+        @apply w-fit;
+    }
+}

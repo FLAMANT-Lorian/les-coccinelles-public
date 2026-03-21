@@ -6,11 +6,11 @@ $bg_image = $banner['bg-image'];
 ?>
 
 <?php if ($banner): ?>
-    <div class="hero-banner relative">
+    <section class="hero-banner relative">
         <div class="max-width-screen h-[calc(100svh-96px)] rg:h-[calc(100svh-112px)] px-default py-default grid-default">
             <div class="col-span-full md:col-start-2 md:col-span-6 lg:col-start-3 lg:col-span-8 flex flex-col lg:grid lg:grid-cols-subgrid gap-y-6 items-center justify-center text-white">
                 <?php if ($title): ?>
-                    <h1 class="text-banner-title font-medium text-center lg:col-span-full lg:self-end"><?= $title ?></h1>
+                    <h2 class="text-banner-title font-medium text-center lg:col-span-full lg:self-end"><?= $title ?></h2>
                 <?php endif; ?>
                 <?php if ($text): ?>
                     <p class="text-banner-text font-normal text-center lg:col-start-2 lg:col-span-6 lg:self-start"><?= $text ?></p>
@@ -25,5 +25,5 @@ $bg_image = $banner['bg-image'];
             ]); ?>
         </span>
         <?php endif; ?>
-    </div>
+    </section>
 <?php endif; ?>

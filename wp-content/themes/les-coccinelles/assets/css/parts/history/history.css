@@ -27,7 +27,7 @@
             }
 
             > div:first-child {
-                @apply md:col-start-6 md:col-span-3 rg:col-start-7;
+                @apply md:col-start-6 md:col-span-4 rg:col-start-7;
             }
 
             time {
@@ -41,7 +41,7 @@
 
         &:nth-child(even) {
             > div:first-child {
-                @apply md:col-start-1 md:col-span-3;
+                @apply md:col-start-1 md:col-span-4;
             }
 
             time {

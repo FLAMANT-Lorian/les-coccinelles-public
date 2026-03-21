@@ -168,5 +168,12 @@
         <path d="M20 4H4C2.89543 4 2 4.89543 2 6V18C2 19.1046 2.89543 20 4 20H20C21.1046 20 22 19.1046 22 18V6C22 4.89543 21.1046 4 20 4Z"
               stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
     </symbol>
+    
+    <!-- LOOP -->
+    <symbol id="loop" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M21.2531 21L16.9131 16.66" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M11 19C15.4183 19 19 15.4183 19 11C19 6.58172 15.4183 3 11 3C6.58172 3 3 6.58172 3 11C3 15.4183 6.58172 19 11 19Z"
+              stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
+    </symbol>
 
 </svg>

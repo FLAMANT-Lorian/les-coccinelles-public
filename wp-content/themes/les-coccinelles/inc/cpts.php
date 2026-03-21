@@ -1,7 +1,7 @@
 <?php
 
 $cpt_news = [
-    'name' => 'Actualités',
+    'name' => 'Nos actualités',
     'cpt_name' => 'news',
     'menu_icon' => 'dashicons-admin-post',
     'publicly_queryable' => true,
@@ -9,7 +9,7 @@ $cpt_news = [
     'has_archive' => true,
     'hierarchical' => true,
     'rewrite' => [
-        'slug' => 'actualites'
+        'slug' => 'nos-actualites'
     ],
     'supports' => [
         'title', 'editor', 'thumbnail', 'excerpt'
@@ -28,7 +28,7 @@ if (!function_exists('register_custom_post_types')) {
                     'new_item' => 'Nouvel élément',
                     'edit_item' => 'Modifier un élément',
                     'view_item' => 'Voir l’élément',
-                    'all_items' => 'Tous les élément',
+                    'all_items' => 'Tous les éléments',
                     'search_items' => 'Rechercher un élément',
                 ],
                 'menu_icon' => $cpt['menu_icon'],

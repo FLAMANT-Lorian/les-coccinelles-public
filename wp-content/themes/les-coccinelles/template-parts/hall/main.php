@@ -7,13 +7,13 @@ $images = $main['gallery'];
 
 ?>
 
-<div class="rg:bg-leaf-to-bottom-right rg:bg-no-repeat rg:bg-position-[top_110px_left_-110px]">
+<section class="rg:bg-leaf-to-bottom-right rg:bg-no-repeat rg:bg-position-[top_110px_left_-110px]">
     <div class="max-width-screen grid-default gap-y-8 rg:gap-y-15 px-default py-default">
         <div class="col-span-full md:col-start-2 md:col-span-6 rl:col-start-3 rl:col-span-4 lg:col-start-3 lg:col-span-8 xg:col-start-4 xg:col-span-6">
             <?php if ($title): ?>
-                <h1 class="text-2.5xl font-medium pb-2.5 md:text-center text-brown">
+                <h2 class="text-2.5xl font-medium pb-2.5 md:text-center text-brown">
                     <?= $title ?>
-                </h1>
+                </h2>
             <?php endif; ?>
             <?php if ($text): ?>
                 <div class="paragraph">
@@ -41,4 +41,4 @@ $images = $main['gallery'];
             <?php endif; ?>
         </div>
     </div>
-</div>
+</section>

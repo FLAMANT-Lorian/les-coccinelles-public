@@ -1,0 +1,31 @@
+.field {
+    @apply relative;
+}
+
+.search-input {
+    @apply w-64 pl-14 relative trans-all;
+
+    &:hover {
+        @apply outline outline-brown;
+    }
+
+    & ~ svg {
+        @apply text-beige-dark trans-all;
+    }
+
+    &:focus ~ svg {
+        @apply text-brown;
+    }
+}
+
+input {
+    @apply py-3 px-4 outline outline-beige-dark;
+
+    &::placeholder {
+        @apply text-beige-dark;
+    }
+
+    &:focus {
+        @apply outline-brown outline;
+    }
+}

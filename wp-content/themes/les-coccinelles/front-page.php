@@ -1,4 +1,4 @@
-<?php get_header(); ?>
+<?php get_header(args: ['title' => 'Bienvenue sur le site de l’asbl les Coccinelles']); ?>
 
 <?php get_template_part('template-parts/banner/hero') ?>
 <?php get_template_part('template-parts/about/about') ?>

@@ -1,6 +1,7 @@
 <?php
+$id = $args['page_id'] ?? false;
 
-$cta = get_field('cta');
+$cta = get_field('cta', $id ?? false);
 $title = $cta['title'];
 $text = $cta['text'];
 $button = $cta['button'];

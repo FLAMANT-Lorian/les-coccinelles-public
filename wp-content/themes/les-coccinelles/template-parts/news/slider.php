@@ -9,6 +9,7 @@ $query_args = [
 ];
 
 $title = $args['title'] ?? 'Nos actualités';
+$button = $args['button'] ?? true;
 
 $news = new WP_Query($query_args);
 $index = 1;
@@ -32,12 +33,15 @@ $index = 1;
                     <div aria-hidden="true" class="dot cursor-pointer md:even:hidden" data-id="<?= $index + 1 ?>"></div>
                 <?php endforeach; ?>
             </div>
-            <a href="<?= get_post_type_archive_link($cpt_news['cpt_name']) ?>"
-               aria-label="Voir toutes les actualités"
-               title="Vers la page d’archives des actualités"
-               class="col-span-full justify-self-center btn-primary-filled">
-                Voir toutes les actualités
-            </a>
+            <?php if ($button): ?>
+                <a href="<?= get_post_type_archive_link($cpt_news['cpt_name']) ?>"
+                   aria-label="Voir toutes les actualités"
+                   title="Vers la page d’archives des actualités"
+                   class="col-span-full justify-self-center btn-primary-filled">
+                    Voir toutes les actualités
+                </a>
+            <?php endif; ?>
         </div>
     </section>
-<?php endif; wp_reset_postdata(); ?>
+<?php endif;
+wp_reset_postdata(); ?>
