@@ -1,15 +1,15 @@
 <?php
 
-global $cpt_news;
+global $cpt_events;
 
 $query_args = [
-        'post_type' => $cpt_news['cpt_name'],
+        'post_type' => $cpt_events['cpt_name'],
         'posts_per_page' => 3,
+        'post__not_in' => [get_the_ID()],
         'order' => 'ASC'
 ];
 
-$title = $args['title'] ?? 'Nos actualités';
-$button = $args['button'] ?? true;
+$title = $args['title'] ?? 'Nos événements';
 
 $news = new WP_Query($query_args);
 $index = 1;
@@ -21,26 +21,20 @@ $index = 1;
             <?php if ($title): ?>
                 <h2 class="col-span-full lg:col-start-4 lg:col-span-6 text-center text-brown text-big"><?= $title ?></h2>
             <?php endif; ?>
-            <div class="slider-track col-span-full flex flex-row gap-4 overflow-x-scroll snap-mandatory snap-x">
+            <div class="slider-track col-span-full flex flex-row md:grid md:grid-cols-8 lg:grid-cols-12 gap-4 overflow-x-scroll snap-mandatory snap-x">
                 <?php while ($news->have_posts()): $news->the_post(); ?>
                     
-                    <?php get_template_part('template-parts/news/card', args: ['index' => $index]); ?>
+                    <div class="col-span-full xg:col-start-2 xg:col-span-10 h-full">
+                        <?php get_template_part('template-parts/events/card', args: ['index' => $index]); ?>
+                    </div>
                     
                     <?php $index++; endwhile; ?>
             </div>
-            <div class="slider-dots dots col-span-full rg:hidden!">
+            <div class="slider-dots dots col-span-full md:hidden!">
                 <?php foreach ($news->posts as $index => $news): ?>
                     <div aria-hidden="true" class="dot cursor-pointer md:even:hidden" data-id="<?= $index + 1 ?>"></div>
                 <?php endforeach; ?>
             </div>
-            <?php if ($button): ?>
-                <a href="<?= get_post_type_archive_link($cpt_news['cpt_name']) ?>"
-                   aria-label="Voir toutes les actualités"
-                   title="Vers la page d’archives des actualités"
-                   class="col-span-full justify-self-center btn-primary-filled">
-                    Voir toutes les actualités
-                </a>
-            <?php endif; ?>
         </div>
     </section>
 <?php endif;

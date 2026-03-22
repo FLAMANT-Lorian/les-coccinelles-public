@@ -37,7 +37,7 @@
     @apply flex flex-col gap-7.5 rg:flex-row rg:gap-8 justify-center items-center grow;
 
     .menu-item {
-        @apply text-brown text-3xl rg:text-xl;
+        @apply text-brown text-3xl rg:text-xl font-medium;
 
         a {
             @apply px-2 py-1;

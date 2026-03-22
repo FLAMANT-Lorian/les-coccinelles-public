@@ -1,15 +1,15 @@
 import {settings as s} from "../settings";
 
 (function () {
-    const newsSlider = {
-        dots: document.querySelectorAll(s.newsSlider.dots_class),
+    const slider = {
+        dots: document.querySelectorAll(s.slider.dots_class),
         init() {
             this.setup();
             this.addEventListeners();
         },
 
         setup() {
-            document.querySelector(s.newsSlider.dots_class).classList.add(s.newsSlider.active_dot_class);
+            document.querySelector(s.slider.dots_class).classList.add(s.slider.active_dot_class);
         },
 
         addEventListeners() {
@@ -19,7 +19,8 @@ import {settings as s} from "../settings";
                    const card = document.getElementById(dot.dataset.id);
                    console.log(card);
                    card.scrollIntoView({
-                       behavior: 'smooth'
+                       behavior: 'smooth',
+                       block: 'center'
                    });
                    this.setActiveClass(e.currentTarget);
                });
@@ -28,14 +29,14 @@ import {settings as s} from "../settings";
 
         setActiveClass(event) {
             this.dots.forEach(dot => {
-               dot.classList.remove(s.newsSlider.active_dot_class);
+               dot.classList.remove(s.slider.active_dot_class);
             });
-            event.classList.add(s.newsSlider.active_dot_class);
+            event.classList.add(s.slider.active_dot_class);
         }
 
 
     };
-    if (document.querySelector('.news-slider')) {
-        newsSlider.init();
+    if (document.querySelector('.slider')) {
+        slider.init();
     }
 })();

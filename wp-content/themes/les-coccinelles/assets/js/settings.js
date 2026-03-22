@@ -5,11 +5,19 @@ export const settings = {
         'burger_menu_checkbox': '.burger-menu-input',
         'nav_container': '.nav-container',
     },
-    newsSlider: {
+    slider: {
         'dots_class': '.dot',
         'active_dot_class': 'active'
     },
     fancybox: {
         'gallery_dataset': '[data-fancybox]',
+    },
+    news: {
+        'search_news_input': '.news-search-input input',
+        'news_wrapper': '.news-wrapper',
+    },
+    events: {
+        'search_events_input': '.events-search-input input',
+        'events_wrapper': '.events-wrapper',
     }
 }

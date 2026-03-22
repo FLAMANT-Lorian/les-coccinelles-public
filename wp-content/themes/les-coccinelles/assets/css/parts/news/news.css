@@ -1,10 +1,6 @@
-.news-track::-webkit-scrollbar {
-    @apply hidden;
-}
-
 .news-card {
 
-    div > span:last-child {
+    .more-text {
         @apply flex flex-row items-center;
 
         &:before {
@@ -13,7 +9,7 @@
     }
 
     &:has(a:hover) {
-        div > span:last-child:before {
+        .more-text:before {
             @apply mr-2 w-4;
         }
 

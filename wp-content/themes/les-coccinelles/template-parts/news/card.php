@@ -6,7 +6,7 @@ $title = get_the_title();
 $alt = get_post_meta(get_post_thumbnail_id(), '_wp_attachment_image_alt', true);
 $thumbnail = get_the_post_thumbnail(size: 'large', attr: ['class' => 'w-full max-h-60 lg:max-h-70 object-cover h-full trans-all', 'alt' => $alt]);
 $excerpt = get_the_excerpt();
-$date = get_the_date('d / m / Y');
+$date = get_the_date('d F Y');
 
 ?>
 
@@ -34,7 +34,7 @@ $date = get_the_date('d / m / Y');
         <?php if ($excerpt): ?>
             <p class="text-base text-gray rg:text-lg line-clamp-3 mb-4"><?= $excerpt ?></p>
         <?php endif; ?>
-        <span class="text-base text-red font-medium mt-auto">En savoir plus</span>
+        <span class="more-text text-base text-red font-medium mt-auto">En savoir plus</span>
     </div>
     <a class="absolute inset-0 z-1"
        aria-label="Vers le détail de l'article"

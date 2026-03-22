@@ -16,6 +16,22 @@ $cpt_news = [
     ],
 ];
 
+$cpt_events = [
+    'name' => 'Nos événements',
+    'cpt_name' => 'events',
+    'menu_icon' => 'dashicons-calendar-alt',
+    'publicly_queryable' => true,
+    'menu_position' => 10,
+    'has_archive' => true,
+    'hierarchical' => true,
+    'rewrite' => [
+        'slug' => 'nos-evenements'
+    ],
+    'supports' => [
+        'title', 'editor', 'thumbnail', 'excerpt'
+    ],
+];
+
 if (!function_exists('register_custom_post_types')) {
     function register_custom_post_types($cpt): void
     {
@@ -48,9 +64,10 @@ if (!function_exists('register_custom_post_types')) {
 if (!function_exists('create_custom_post_type')) {
     function create_custom_post_type(): void
     {
-        global $cpt_news;
+        global $cpt_news, $cpt_events;
 
         register_custom_post_types($cpt_news);
+        register_custom_post_types($cpt_events);
     }
 }
 

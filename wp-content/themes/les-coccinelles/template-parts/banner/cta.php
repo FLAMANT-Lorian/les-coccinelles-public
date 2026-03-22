@@ -2,10 +2,10 @@
 $id = $args['page_id'] ?? false;
 
 $cta = get_field('cta', $id ?? false);
-$title = $cta['title'];
-$text = $cta['text'];
-$button = $cta['button'];
-$image = $cta['background-image'];
+$title = $cta['cta_title'];
+$text = $cta['cta_text'];
+$button = $cta['cta_button'];
+$image = $cta['cta_background-image'];
 
 ?>
 
