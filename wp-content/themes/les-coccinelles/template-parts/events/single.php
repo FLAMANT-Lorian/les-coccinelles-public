@@ -34,7 +34,7 @@ $contacts = get_field('contact');
         <?php endif; ?>
         <div class="events-infos-wrapper col-span-full xg:col-start-2 xg:col-span-10 rg:grid rg:grid-cols-12 rg:gap-6 max-rg:divide-beige-dark/60 max-rg:divide-y">
             <?php if ($contents): ?>
-                <article class="flex flex-col gap-8 rg:gap-15 max-rg:pb-12 rg:col-span-5">
+                <article class="flex flex-col gap-8 rg:gap-15 max-rg:pb-12 rg:col-span-7 xg:col-span-8">
                     <h3 class="sr-only">Contenu de l'événement</h3>
                     <?php foreach ($contents as $content):
                         $title = $content['title'];
@@ -53,7 +53,10 @@ $contacts = get_field('contact');
                     <?php endforeach; ?>
                 </article>
             <?php endif; ?>
-            <div class="max-rg:pt-12 coordinate-event rg:self-start rg:sticky rg:top-12 rg:col-start-8 rg:col-span-5 xg:col-span-4 xg:col-start-9">
+            <span aria-hidden="true" class="max-rg:hidden h-full w-full flex justify-center">
+                <span aria-hidden="true" class="block w-px h-full bg-beige-dark/60"></span>
+            </span>
+            <div class="max-rg:pt-12 coordinate-event rg:self-start rg:sticky rg:top-12 rg:col-start-9 rg:col-span-4 xg:col-span-3 xg:col-start-10">
                 <div>
                     <h3>Horaires</h3>
                     <ul class="flex flex-col gap-4">
@@ -89,22 +92,30 @@ $contacts = get_field('contact');
                                         <?php endif; ?>
                                         <?php if ($contact['tel']): ?>
                                             <li class="ml-4 mb-2">
-                                                <svg class="text-red" width="24" height="24" viewBox="0 0 24 24"
-                                                     fill="none"
-                                                     xmlns="http://www.w3.org/2000/svg">
-                                                    <use xlink:href="#phone"></use>
-                                                </svg>
-                                                <span><?= $contact['tel'] ?></span>
+                                                <a href="tel:<?= $contact['tel'] ?>"
+                                                   aria-label="<?= $contact['tel'] ?>"
+                                                   title="Téléphoner au <?= $contact['tel'] ?>">
+                                                    <svg class="text-red" width="24" height="24" viewBox="0 0 24 24"
+                                                         fill="none"
+                                                         xmlns="http://www.w3.org/2000/svg">
+                                                        <use xlink:href="#phone"></use>
+                                                    </svg>
+                                                    <span><?= $contact['tel'] ?></span>
+                                                </a>
                                             </li>
                                         <?php endif; ?>
                                         <?php if ($contact['email']): ?>
                                             <li class="ml-4">
-                                                <svg class="text-red" width="24" height="24" viewBox="0 0 24 24"
-                                                     fill="none"
-                                                     xmlns="http://www.w3.org/2000/svg">
-                                                    <use xlink:href="#email"></use>
-                                                </svg>
-                                                <span><?= $contact['email'] ?></span>
+                                                <a href="mailto:<?= $contact['email'] ?>"
+                                                   aria-label="<?= $contact['email'] ?>"
+                                                   title="Envoyer un email à <?= $contact['email'] ?>">
+                                                    <svg class="text-red" width="24" height="24" viewBox="0 0 24 24"
+                                                         fill="none"
+                                                         xmlns="http://www.w3.org/2000/svg">
+                                                        <use xlink:href="#email"></use>
+                                                    </svg>
+                                                    <span><?= $contact['email'] ?></span>
+                                                </a>
                                             </li>
                                         <?php endif; ?>
                                     </ul>
@@ -129,7 +140,7 @@ $contacts = get_field('contact');
                                            aria-label="Plan d'accès"
                                            title="Plan d'accès"
                                            target="_blank"
-                                           class="text-blue-500 underline">
+                                           class="text-blue-500! underline hover:text-blue-800! trans-all">
                                             Plan d’accès
                                         </a>
                                     <?php endif; ?>

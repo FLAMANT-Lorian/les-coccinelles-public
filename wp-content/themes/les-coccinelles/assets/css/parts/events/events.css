@@ -40,18 +40,14 @@
     @apply flex flex-col md:flex-row md:justify-between rg:flex-col rg:justify-start gap-8 rg:gap-15;
 
     h3 {
-        @apply text-2xl rg:text-2.5xl font-medium text-brown pb-4;
+        @apply text-2xl font-medium text-brown pb-4;
     }
 
-    li {
+    li, a {
         @apply flex flex-row items-center gap-2 paragraph;
     }
-}
 
-.events-infos-wrapper {
-    @apply relative;
-
-    &:before {
-        @apply rg:content-[''] rg:absolute rg:top-0 rg:left-1/2 rg:w-px rg:-translate-x-1/2 rg:h-full rg:bg-beige-dark/60;
+    a {
+        @apply  hover:text-red trans-all;
     }
 }

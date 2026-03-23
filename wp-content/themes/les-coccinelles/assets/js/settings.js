@@ -19,5 +19,10 @@ export const settings = {
     events: {
         'search_events_input': '.events-search-input input',
         'events_wrapper': '.events-wrapper',
+    },
+    form: {
+        'acceptance_field': '.acceptance-field input',
+        'submit_button': '.submit-button',
+        'form_class': '.form',
     }
 }
