@@ -131,7 +131,7 @@ $access_plan = $contact['access-plan'];
                                            aria-label="Plan d’accès"
                                            title="Voir le plan d'accès"
                                            target="_blank">
-                                            <span class="text-blue-500 underline hover:text-blue-800 trans-all">Plan d’accès</span>
+                                            <span class="paragraph text-blue-500! underline hover:text-blue-800! trans-all">Plan d’accès</span>
                                         </a>
                                     <?php endif; ?>
                                 </div>
