@@ -9,7 +9,7 @@
         @apply content-[url('/wp-content/themes/les-coccinelles/assets/img/svgs/zoom.svg')] scale-50 absolute w-20 h-20 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-white/80 opacity-0 trans-all flex justify-center items-center;
     }
 
-    &:hover, &:focus, &:focus-visible {
+    &:hover, &:focus {
         &::after {
             @apply opacity-20;
         }

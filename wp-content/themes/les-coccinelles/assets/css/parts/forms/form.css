@@ -5,7 +5,8 @@
 .search-input {
     @apply w-64 pl-14 relative trans-all;
 
-    &:hover {
+    &:hover,
+    &:focus {
         @apply outline outline-brown;
     }
 
@@ -35,18 +36,18 @@ textarea {
 }
 
 .acceptance-field {
-    @apply flex flex-row gap-2;
+    @apply flex flex-row;
 
-    &:has(input:checked) label {
+    &:has(input:checked) label, &:has(input:hover) label, &:has(input:focus) label {
         @apply text-brown;
     }
 
     label {
-        @apply paragraph hover:text-brown;
+        @apply pl-2 paragraph hover:text-brown;
     }
 
     input {
-        @apply mt-1 appearance-none min-w-4 min-h-4 max-w-4 max-h-4 border border-red outline-none hover:bg-red/50 trans-all p-0;
+        @apply mt-1 appearance-none min-w-4 min-h-4 max-w-4 max-h-4 border border-red outline-none hover:bg-red/50 focus:bg-red/50 trans-all p-0;
 
         &:checked {
             @apply bg-red;

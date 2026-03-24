@@ -1,5 +1,6 @@
 .service-item {
-    &:has(a:hover) {
+    &:has(a:hover),
+    &:has(a:focus) {
         .btn-services:after {
             @apply rotate-0;
         }

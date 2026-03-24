@@ -8,7 +8,8 @@
         }
     }
 
-    &:has(a:hover) {
+    &:has(a:hover),
+    &:has(a:focus) {
         .more-text:before {
             @apply mr-2 w-4;
         }
@@ -48,6 +49,6 @@
     }
 
     a {
-        @apply  hover:text-red trans-all;
+        @apply hover:text-red focus:text-red trans-all;
     }
 }

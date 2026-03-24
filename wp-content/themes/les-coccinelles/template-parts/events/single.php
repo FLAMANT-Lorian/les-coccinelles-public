@@ -140,7 +140,7 @@ $contacts = get_field('contact');
                                            aria-label="Plan d'accès"
                                            title="Plan d'accès"
                                            target="_blank"
-                                           class="text-blue-500! underline hover:text-blue-800! trans-all">
+                                           class="text-blue-500! underline hover:text-blue-800! focus:text-blue-800! trans-all">
                                             Plan d’accès
                                         </a>
                                     <?php endif; ?>

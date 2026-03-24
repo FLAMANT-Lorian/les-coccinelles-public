@@ -8,7 +8,8 @@
         }
     }
 
-    &:has(a:hover) {
+    &:has(a:hover),
+    &:has(a:focus) {
         .more-text:before {
             @apply mr-2 w-4;
         }

@@ -91,13 +91,13 @@ $access_plan = $contact['access-plan'];
                     </fieldset>
                     <div class="flex flex-col md:flex-row gap-6">
                         <div class="acceptance-field">
-                            <input type="checkbox" id="acceptance">
-                            <label for="acceptance">J’accepte que mes données soient utilisées pour me recontacter et me
+                            <input type="checkbox" id="acceptance" class="cursor-pointer">
+                            <label for="acceptance" class="cursor-pointer">J’accepte que mes données soient utilisées pour me recontacter et me
                                 tenir informé(e) des actualités et événements. Elles resteront confidentielles et ne
                                 seront jamais partagées à des tiers.</label>
                         </div>
                         <button type="submit"
-                                class="submit-button self-end md:self-center btn py-3 bg-red border border-red text-white hover:text-brown hover:bg-transparent cursor-pointer">
+                                class="submit-button self-end md:self-center btn py-3 bg-red border border-red text-white hover:text-brown hover:bg-transparent focus:text-brown focus:bg-transparent cursor-pointer">
                             Envoyer
                         </button>
                     </div>
@@ -131,18 +131,18 @@ $access_plan = $contact['access-plan'];
                                            aria-label="Plan d’accès"
                                            title="Voir le plan d'accès"
                                            target="_blank">
-                                            <span class="paragraph text-blue-500! underline hover:text-blue-800! trans-all">Plan d’accès</span>
+                                            <span class="paragraph text-blue-500! underline hover:text-blue-800! focus:text-blue-800! trans-all">Plan d’accès</span>
                                         </a>
                                     <?php endif; ?>
                                 </div>
                             </li>
                         <?php endif; ?>
                         <?php if ($email): ?>
-                            <li class="flex flex-row gap-x-4 [&:hover_span]:text-red">
+                            <li class="flex flex-row gap-x-4 [&:hover_span]:text-red [&:focus-within_span]:text-red">
                                 <a href="mailto:<?= $email ?>"
                                    aria-label="<?= $email ?>"
                                    title="Envoyer un email à <?= $email ?>"
-                                   class="flex flex-row items-center gap-x-4">
+                                   class="flex flex-row gap-x-4 items-center">
                                     <svg class="text-red" width="24" height="24" viewBox="0 0 24 24" fill="none"
                                          xmlns="http://www.w3.org/2000/svg">
                                         <use href="#email"></use>
@@ -152,11 +152,11 @@ $access_plan = $contact['access-plan'];
                             </li>
                         <?php endif; ?>
                         <?php if ($phone): ?>
-                            <li class=" [&:hover_span]:text-red flex flex-row gap-x-4">
+                            <li class=" [&:hover_span]:text-red [&:focus-within_span]:text-red flex flex-row gap-x-4">
                                 <a href="tel:<?= $phone ?>"
                                    aria-label="<?= $phone ?>"
                                    title="Téléphoner au <?= $phone ?>"
-                                   class="flex flex-row items-center gap-x-4">
+                                   class="flex flex-row gap-x-4 items-center">
                                     <svg class="text-red" width="24" height="24" viewBox="0 0 24 24" fill="none"
                                          xmlns="http://www.w3.org/2000/svg">
                                         <use href="#phone"></use>
