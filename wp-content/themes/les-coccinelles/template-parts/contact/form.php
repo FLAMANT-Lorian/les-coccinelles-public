@@ -29,66 +29,11 @@ $access_plan = $contact['access-plan'];
                 <p class="paragraph mb-6">Les champs renseignés avec <strong class="text-red">*</strong> sont requis !
                 </p>
                 <form action="" method="POST" class="flex flex-col gap-y-6" novalidate>
-                    <fieldset class="grid grid-col-1 md:grid-cols-2 gap-6">
-                        <legend class="sr-only">Informations principales</legend>
-                        
-                        <?php get_template_part('template-parts/forms/input/text', args: [
-                                'label' => 'Nom',
-                                'name' => 'last-name',
-                                'id' => 'last-name',
-                                'class' => '',
-                                'placeholder' => 'Doe',
-                                'required' => true
-                        ]); ?>
-                        
-                        <?php get_template_part('template-parts/forms/input/text', args: [
-                                'label' => 'Prénom',
-                                'name' => 'first-name',
-                                'id' => 'first-name',
-                                'class' => '',
-                                'placeholder' => 'John',
-                                'required' => true
-                        ]) ?>
-                        
-                        <?php get_template_part('template-parts/forms/input/text', args: [
-                                'label' => 'Adresse e-mail',
-                                'name' => 'email',
-                                'id' => 'email-address',
-                                'class' => '',
-                                'type' => 'email',
-                                'placeholder' => 'johndoe@example.be',
-                                'required' => true
-                        ]) ?>
-                        
-                        <?php get_template_part('template-parts/forms/input/text', args: [
-                                'label' => 'Téléphone',
-                                'name' => 'tel',
-                                'id' => 'tel',
-                                'type' => 'tel',
-                                'class' => '',
-                                'placeholder' => '+XX XXX XX XX XX',
-                                'required' => true
-                        ]) ?>
-                        
-                        <?php get_template_part('template-parts/forms/input/text', args: [
-                                'label' => 'Objet',
-                                'name' => 'object',
-                                'id' => 'object',
-                                'class' => 'md:col-span-2',
-                                'placeholder' => 'Demande de ...',
-                                'required' => true
-                        ]) ?>
-                        
-                        <?php get_template_part('template-parts/forms/input/textarea', args: [
-                                'label' => 'Message',
-                                'name' => 'message',
-                                'id' => 'message',
-                                'class' => 'md:col-span-2',
-                                'placeholder' => 'Je vous contacte pour ...',
-                                'required' => true
-                        ]) ?>
                     
-                    </fieldset>
+                    <?php get_template_part('template-parts/forms/fieldset', args: [
+                            'hidden_input_type' => 'message'
+                    ]); ?>
+                    
                     <div class="flex flex-col md:flex-row gap-6">
                         <div class="acceptance-field">
                             <input type="checkbox" id="acceptance" class="cursor-pointer">
@@ -109,7 +54,7 @@ $access_plan = $contact['access-plan'];
             <div class="coordinate flex flex-col gap-6 md:flex-row lg:flex-col md:gap-12 col-span-full rl:col-start-2 lg:col-start-9 lg:col-span-4 rl:col-span-6  max-lg:pt-8">
                 <div class="flex flex-col gap-y-4 md:w-1/2 lg:w-full">
                     <?php if ($coordinate_title): ?>
-                        <h3 class="text-xl rg:text-2xl font-medium"><?= $coordinate_title ?></h3>
+                        <h3 class="text-xl rg:text-2xl font-medium pb-4"><?= $coordinate_title ?></h3>
                     <?php endif; ?>
                     <?php if ($coordinate_text): ?>
                         <p class="paragraph"><?= $coordinate_text ?></p>

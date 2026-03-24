@@ -3,10 +3,23 @@
 if (!function_exists('searchInPost')) {
     function searchInPost(): void
     {
-        global $content, $card, $cpt_events, $cpt_news;
-
         $term = sanitize_text_field($_POST['search']);
         $cpt_name = $_POST['cpt_name'];
+
+        $content = get_filtered_items($term, $cpt_name);
+
+        wp_send_json_success(['html' => $content]);
+
+    }
+}
+
+add_action('wp_ajax_search_in_post', 'searchInPost');
+add_action('wp_ajax_nopriv_search_in_post', 'searchInPost');
+
+if (!function_exists('get_filtered_items')) {
+    function get_filtered_items($term = '', $cpt_name = ''): string
+    {
+        global $content, $card, $cpt_events, $cpt_news;
 
         $query_args = [
             'post_type' => $cpt_name,
@@ -28,7 +41,7 @@ if (!function_exists('searchInPost')) {
 
                 if ($cpt_name === $cpt_news['cpt_name']) {
                     $card = get_template_part('template-parts/news/card', args: ['index' => $index]);
-                } else {
+                } else if ($cpt_name === $cpt_events['cpt_name']) {
                     $card = get_template_part('template-parts/events/card', args: ['index' => $index]);
                 }
 
@@ -42,23 +55,17 @@ if (!function_exists('searchInPost')) {
                 $index++;
             }
 
-            // Actualiser la pagination
-            $content .= custom_pagination($items);
+            $content .= custom_pagination($items, $term);
         } else {
             ob_start();
-            $content .= '<div class="col-span-full md:col-span-4">Aucun résultat pour : <strong class="font-bold text-red">' . $term . '</strong></div>';
+            $content .= get_template_part('template-parts/archive/no-post-found', args: ['term' => $term]);
             $content .= ob_get_clean();
         }
         wp_reset_postdata();
 
-        wp_send_json_success(['html' => $content]);
-
+        return $content;
     }
 }
-
-add_action('wp_ajax_search_in_post', 'searchInPost');
-add_action('wp_ajax_nopriv_search_in_post', 'searchInPost');
-
 
 /**
  * Filter posts by title (Source: https://stackoverflow.com/questions/62350261/how-to-search-only-in-post-title-wp-query)

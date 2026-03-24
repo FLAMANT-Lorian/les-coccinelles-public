@@ -1,7 +1,7 @@
 <?php
 
 if (!function_exists('custom_pagination')) {
-    function custom_pagination($query): array|string|null
+    function custom_pagination($query, string $search_term = ''): array|string|null
     {
         $total_pages = $query->max_num_pages;
 
@@ -14,6 +14,8 @@ if (!function_exists('custom_pagination')) {
 
         $current_page = get_query_var('paged') ? get_query_var('paged') : 1;
 
+        $add_args['search'] = $search_term;
+
         return paginate_links([
             'base' => '/nos-actualites' . '?paged=%#%',
             'current' => $current_page,
@@ -21,6 +23,7 @@ if (!function_exists('custom_pagination')) {
             'type' => 'list',
             'prev_text' => $prev_arrow,
             'next_text' => $next_arrow,
+            'add_args' => $add_args,
         ]);
 
     }

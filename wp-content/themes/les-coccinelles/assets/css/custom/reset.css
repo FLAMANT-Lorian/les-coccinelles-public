@@ -41,3 +41,7 @@ ul.page-numbers {
         @apply w-fit;
     }
 }
+
+.no-post-found {
+    @apply col-span-full justify-self-center text-lg;
+}
