@@ -70,7 +70,7 @@ $access_plan = $contact['access-plan'];
                                     <use href="#map"></use>
                                 </svg>
                                 <div class="flex flex-col justify-start gap-2">
-                                    <span class="paragraph"><?= $address ?></span>
+                                    <span itemprop="address" class="paragraph"><?= $address ?></span>
                                     <?php if ($access_plan): ?>
                                         <a href="<?= $access_plan ?>"
                                            aria-label="Plan d’accès"
@@ -92,7 +92,7 @@ $access_plan = $contact['access-plan'];
                                          xmlns="http://www.w3.org/2000/svg">
                                         <use href="#email"></use>
                                     </svg>
-                                    <span class="paragraph trans-all"><?= $email ?></span>
+                                    <span itemprop="email" class="paragraph trans-all"><?= $email ?></span>
                                 </a>
                             </li>
                         <?php endif; ?>
@@ -106,7 +106,7 @@ $access_plan = $contact['access-plan'];
                                          xmlns="http://www.w3.org/2000/svg">
                                         <use href="#phone"></use>
                                     </svg>
-                                    <span class="paragraph trans-all"><?= $phone ?></span>
+                                    <span itemprop="telephone" class="paragraph trans-all"><?= $phone ?></span>
                                 </a>
                             </li>
                         <?php endif; ?>

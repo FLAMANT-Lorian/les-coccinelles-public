@@ -13,7 +13,7 @@ $bg_image = $banner['bg-image'];
                     <h2 class="text-banner-title font-medium text-center lg:col-span-full lg:self-end"><?= $title ?></h2>
                 <?php endif; ?>
                 <?php if ($text): ?>
-                    <p class="text-banner-text font-normal text-center lg:col-start-2 lg:col-span-6 lg:self-start"><?= $text ?></p>
+                    <p itemprop="description" class="text-banner-text font-normal text-center lg:col-start-2 lg:col-span-6 lg:self-start"><?= $text ?></p>
                 <?php endif; ?>
             </div>
         </div>

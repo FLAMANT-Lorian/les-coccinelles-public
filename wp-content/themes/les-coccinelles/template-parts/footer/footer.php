@@ -32,12 +32,12 @@ $facebook = $social_networks['facebook'];
                             <a href="<?= $access_plan ?>"
                                target="_blank"
                                title="Vers le plan d’accès"
-                               class="flex flex-row items-center gap-4 opacity-60 hover:opacity-100 focus:opacity-100 trans-all">
+                               class="flex flex-row items-center gap-4 opacity-60 hover:opacity-100 trans-all">
                                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
                                      xmlns="http://www.w3.org/2000/svg">
                                     <use xlink:href="#map"></use>
                                 </svg>
-                                <span><?= $address ?></span>
+                                <span itemprop="address"><?= $address ?></span>
                             </a>
                         </li>
                     <?php else: ?>
@@ -55,12 +55,12 @@ $facebook = $social_networks['facebook'];
                         <a href="tel:<?= $phone ?>"
                            target="_blank"
                            title="Téléphoner au : <?= $phone ?>"
-                           class="flex flex-row items-center gap-4 opacity-60 hover:opacity-100 focus:opacity-100 trans-all">
+                           class="flex flex-row items-center gap-4 opacity-60 hover:opacity-100 trans-all">
                             <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
                                  xmlns="http://www.w3.org/2000/svg">
                                 <use xlink:href="#phone"></use>
                             </svg>
-                            <span><?= $phone ?></span>
+                            <span itemprop="telephone"><?= $phone ?></span>
                         </a>
                     </li>
                 <?php endif; ?>
@@ -69,12 +69,12 @@ $facebook = $social_networks['facebook'];
                         <a href="mailto:<?= $email ?>"
                            target="_blank"
                            title="Envoyer un mail à : <?= $email ?>"
-                           class="flex flex-row items-center gap-4 opacity-60 hover:opacity-100 focus:opacity-100 trans-all">
+                           class="flex flex-row items-center gap-4 opacity-60 hover:opacity-100 trans-all">
                             <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
                                  xmlns="http://www.w3.org/2000/svg">
                                 <use xlink:href="#email"></use>
                             </svg>
-                            <span><?= $email ?></span>
+                            <span itemprop="email"><?= $email ?></span>
                         </a>
                     </li>
                 <?php endif; ?>
@@ -101,13 +101,13 @@ $facebook = $social_networks['facebook'];
             <?php if ($facebook || $instagram): ?>
                 <ul class="flex flex-row max-md:justify-center lg:justify-end gap-6">
                     <?php if ($facebook): ?>
-                        <li class="text-white opacity-60 hover:opacity-100 focus-within:opacity-100 trans-all">
+                        <li class="text-white opacity-60 hover:opacity-100 trans-all">
                             <a href="<?= $facebook ?>"
                                target="_blank"
                                aria-label="Vers le compte Facebook de l’asbl"
                                title="Vers le compte Facebook de l’asbl"
                                class="w-6 h-6 flex justify-center items-center">
-                                <span class="sr-only">Vers le compte Facebook de l’asbl</span>
+                                <span class="sr-only" itemprop="sameAs">Vers le compte Facebook de l’asbl</span>
                                 <svg width="14" height="24" class="h-4.5" viewBox="0 0 14 24" fill="none"
                                      xmlns="http://www.w3.org/2000/svg">
                                     <use xlink:href="#facebook"></use>
@@ -116,13 +116,13 @@ $facebook = $social_networks['facebook'];
                         </li>
                     <?php endif; ?>
                     <?php if ($instagram): ?>
-                        <li class="text-white opacity-60 hover:opacity-100 focus-within:opacity-100 trans-all">
+                        <li class="text-white opacity-60 hover:opacity-100 trans-all">
                             <a href="<?= $instagram ?>"
                                target="_blank"
                                aria-label="Vers le compte Instagram de l’asbl"
                                title="Vers le compte Instagram de l’asbl"
                                class="w-6 h-6 flex justify-center items-center">
-                                <span class="sr-only">Vers le compte Instagram de l’asbl</span>
+                                <span class="sr-only" itemprop="sameAs">Vers le compte Instagram de l’asbl</span>
                                 <svg width="24" height="24" class="h-4.5" viewBox="0 0 24 24" fill="none"
                                      xmlns="http://www.w3.org/2000/svg">
                                     <use xlink:href="#instagram"></use>
@@ -140,7 +140,7 @@ $facebook = $social_networks['facebook'];
                 <a aria-label="Vers le site web de Lorian Flamant"
                    title="Vers le site web de Lorian Flamant"
                    target="_blank"
-                   class="font-semibold opacity-60 hover:opacity-100 focus:opacity-100 trans-all"
+                   class="font-semibold opacity-60 hover:opacity-100 trans-all"
                    href="https://lorianflamant.com">
                     Lorian Flamant
                 </a>

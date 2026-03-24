@@ -8,7 +8,7 @@ $history_items = get_field('history');
     <div class="max-width-screen px-default py-default">
         <h2 class="sr-only">Historique de l’asbl Les Coccinelles</h2>
         <?php if ($history_items): ?>
-            <div class="history rg:py-default grid-default gap-y-16">
+            <div class="history rg:py-default grid-default gap-y-16" itemscope itemtype="https://schema.org/ItemList">
                 <?php foreach ($history_items as $history_item): ?>
                     
                     <?php get_template_part('template-parts/history/card', args: ['history_item' => $history_item]); ?>

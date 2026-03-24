@@ -8,7 +8,7 @@
     <meta name="description" content="Site vitrine pour l’asbl Les Coccinelles situé à Morhet">
     <?php wp_head(); ?>
 </head>
-<body <?php body_class(['body', 'bg-beige-light']) ?>>
+<body <?php body_class(['body', 'bg-beige-light']) ?> itemscope itemtype="https://schema.org/NGO">
     <?php
     
     wp_body_open();

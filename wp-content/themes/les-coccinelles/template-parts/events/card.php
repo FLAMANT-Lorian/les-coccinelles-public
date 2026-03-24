@@ -12,7 +12,9 @@ $facebook_link = get_field('facebook-link');
 
 ?>
 
-<article id="<?= $index ?>" class="events-card relative flex flex-col md:flex-row md:h-62 rg:h-70 border border-beige-dark max-md:min-w-[calc(100vw-48px)]">
+<article itemscope itemtype="https://schema.org/Event" itemprop="event"
+         id="<?= $index ?>"
+         class="events-card relative flex flex-col md:flex-row md:h-62 rg:h-70 border border-beige-dark max-md:min-w-[calc(100vw-48px)]">
     <div class="relative md:w-1/2 h-full">
         <?php if ($thumbnail): ?>
             <div class="overflow-hidden [&_img]:trans-all h-62 sm:h-70 md:h-full">
@@ -33,11 +35,12 @@ $facebook_link = get_field('facebook-link');
             <?php endif; ?>
             <?php if ($facebook_link): ?>
                 <a href="<?= $facebook_link ?>"
+                   itemprop="url"
                    aria-label="Voir l’événement sur Facebook"
                    title="Voir l’événement sur Facebook"
                    class="text-red relative z-2 hover:text-brown focus:text-brown trans-all"
                    target="_blank">
-                    <span class="sr-only">Voir l’événement sur Facebook</span>
+                    <span itemprop="sameAs" class="sr-only">Voir l’événement sur Facebook</span>
                     <svg width="14" height="24" class="h-4.5" viewBox="0 0 14 24" fill="none"
                          xmlns="http://www.w3.org/2000/svg">
                         <use xlink:href="#facebook"></use>
@@ -46,17 +49,17 @@ $facebook_link = get_field('facebook-link');
             <?php endif; ?>
         </div>
         <?php if ($title): ?>
-            <h3 class="text-xl rl:text-2.5xl text-brown font-medium pb-2"><?= $title ?></h3>
+            <h3 itemprop="name" class="text-xl rl:text-2.5xl text-brown font-medium pb-2"><?= $title ?></h3>
         <?php endif; ?>
         <?php if ($excerpt): ?>
-            <p class="paragraph line-clamp-3 mb-4"><?= $excerpt ?></p>
+            <p itemprop="description" class="paragraph line-clamp-3 mb-4"><?= $excerpt ?></p>
         <?php endif; ?>
         <span class="more-text text-base text-red font-medium mt-auto">En savoir plus</span>
     </div>
     <a href="<?= get_the_permalink() ?>"
        aria-label="Vers la page de l’événement"
        title="Vers la page de l’événement"
-    class="absolute inset-0 z-1">
+       class="absolute inset-0 z-1">
         <span class="sr-only">Vers la page de l’événement</span>
     </a>
 </article>

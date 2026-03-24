@@ -8,7 +8,7 @@ $title = $args['title'] ?? false;
 
 <header>
     <?php if ($title): ?>
-        <h1 class="sr-only"><?= $title ?></h1>
+        <h1 itemprop="legalName" class="sr-only"><?= $title ?></h1>
     <?php endif; ?>
     <a href="#content"
        aria-label="Aller au contenu principal"
@@ -58,7 +58,7 @@ $title = $args['title'] ?? false;
                            aria-label="Vers le compte Facebook de l’asbl"
                            title="Vers le compte Facebook de l’asbl"
                            class="text-brown hover:text-red focus:text-red h-6 flex justify-center items-center">
-                            <span class="sr-only">Vers le compte Facebook de l’asbl</span>
+                            <span itemprop="sameAs" class="sr-only">Vers le compte Facebook de l’asbl</span>
                             <svg class="trans-all" width="14" height="24" viewBox="0 0 14 24" fill="none"
                                  xmlns="http://www.w3.org/2000/svg">
                                 <use xlink:href="#facebook"></use>
@@ -71,7 +71,7 @@ $title = $args['title'] ?? false;
                            aria-label="Vers le compte Instagram de l’asbl"
                            title="Vers le compte Instagram de l’asbl"
                            class="text-brown hover:text-red focus:text-red w-6 h-6 flex justify-center items-center">
-                            <span class="sr-only">Vers le compte Instagram de l’asbl</span>
+                            <span itemprop="sameAs" class="sr-only">Vers le compte Instagram de l’asbl</span>
                             <svg class="trans-all" width="24" height="24" viewBox="0 0 24 24" fill="none"
                                  xmlns="http://www.w3.org/2000/svg">
                                 <use xlink:href="#instagram"></use>
