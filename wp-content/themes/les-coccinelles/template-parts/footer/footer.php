@@ -52,7 +52,7 @@ $facebook = $social_networks['facebook'];
                 <?php endif; ?>
                 <?php if ($phone): ?>
                     <li class="text-white">
-                        <a href="tel:<?= $phone ?>"
+                        <a href="tel:<?= str_replace([' ', '(0)'], '', $phone) ?>"
                            target="_blank"
                            title="Téléphoner au : <?= $phone ?>"
                            class="flex flex-row items-center gap-4 opacity-60 hover:opacity-100 trans-all">

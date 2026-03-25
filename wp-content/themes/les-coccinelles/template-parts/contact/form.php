@@ -13,19 +13,19 @@ $access_plan = $contact['access-plan'];
 
 ?>
 
-<section class="rg:bg-leaf-to-top-left rg:bg-position-[bottom_-110px_right_-110px] rg:bg-no-repeat">
+<div class="rg:bg-leaf-to-top-left rg:bg-position-[bottom_-110px_right_-110px] rg:bg-no-repeat">
     <div class="max-width-screen px-default py-default grid-default gap-y-8 lg:gap-y-15">
         <div class="col-span-full text-center flex flex-col gap-y-2">
             <?php if ($subtitle): ?>
-                <h2 class="text-xl rg:text-2xl text-red font-medium"><?= $subtitle ?></h2>
+                <h1 class="text-xl rg:text-2xl text-red font-medium"><?= $subtitle ?></h1>
             <?php endif; ?>
             <?php if ($title): ?>
                 <span class="text-big text-brown"><?= $title ?></span>
             <?php endif; ?>
         </div>
-        <div class="col-span-full grid grid-default max-lg:divide-y max-lg:divide-beige-dark/60">
+        <section class="col-span-full grid grid-default max-lg:divide-y max-lg:divide-beige-dark/60">
             <div class="form col-span-full rl:col-start-2 rl:col-span-6 lg:col-start-1 lg:col-span-7 max-lg:pb-8">
-                <h3 class="sr-only">Formulaire de contact</h3>
+                <h2 class="sr-only">Formulaire de contact</h2>
                 <p class="paragraph mb-6">Les champs renseignés avec <strong class="text-red">*</strong> sont requis !
                 </p>
                 <form action="" method="POST" class="flex flex-col gap-y-6" novalidate>
@@ -98,7 +98,7 @@ $access_plan = $contact['access-plan'];
                         <?php endif; ?>
                         <?php if ($phone): ?>
                             <li class=" [&:hover_span]:text-red [&:focus-within_span]:text-red flex flex-row gap-x-4">
-                                <a href="tel:<?= $phone ?>"
+                                <a href="tel:<?= str_replace([' ', '(0)'], '', $phone) ?>"
                                    aria-label="<?= $phone ?>"
                                    title="Téléphoner au <?= $phone ?>"
                                    class="flex flex-row gap-x-4 items-center">
@@ -113,6 +113,6 @@ $access_plan = $contact['access-plan'];
                     </ul>
                 </div>
             </div>
-        </div>
+        </section>
     </div>
-</section>
+</div>

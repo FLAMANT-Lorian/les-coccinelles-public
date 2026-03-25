@@ -89,7 +89,7 @@ $calendar_title = $form['calendar-title'];
                         <?php endif; ?>
                         <?php if ($phone): ?>
                             <li class=" [&:hover_span]:text-red [&:focus-within_span]:text-red flex flex-row gap-x-4">
-                                <a href="tel:<?= $phone ?>"
+                                <a href="tel:<?= str_replace([' ', '(0)'], '', $phone) ?>"
                                    aria-label="<?= $phone ?>"
                                    title="Téléphoner au <?= $phone ?>"
                                    class="flex flex-row gap-x-4 items-center">

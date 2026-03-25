@@ -14,12 +14,12 @@ $contents = get_field('content');
 $contacts = get_field('contact');
 ?>
 
-<section class="rg:bg-leaf-to-bottom-right rg:bg-position-[top_110px_left_-110px] rg:bg-no-repeat">
+<div class="rg:bg-leaf-to-bottom-right rg:bg-position-[top_110px_left_-110px] rg:bg-no-repeat">
     <div class="px-default py-default grid-default gap-y-8 md:gap-y-12 max-width-screen">
         <?php if ($title): ?>
-            <h2 class="text-2.5xl rg:text-4.5xl col-span-full text-center max-rg:mb-8 text-brown font-medium">
+            <h1 class="text-2.5xl rg:text-4.5xl col-span-full text-center max-rg:mb-8 text-brown font-medium">
                 <?= $title ?>
-            </h2>
+            </h1>
         <?php endif; ?>
         <?php if ($thumbnail): ?>
             <div class="col-span-full xg:col-start-2 xg:col-span-10">
@@ -32,17 +32,17 @@ $contacts = get_field('contact');
                 </a>
             </div>
         <?php endif; ?>
-        <div class="events-infos-wrapper col-span-full xg:col-start-2 xg:col-span-10 rg:grid rg:grid-cols-12 rg:gap-6 max-rg:divide-beige-dark/60 max-rg:divide-y">
+        <section class="events-infos-wrapper col-span-full xg:col-start-2 xg:col-span-10 rg:grid rg:grid-cols-12 rg:gap-6 max-rg:divide-beige-dark/60 max-rg:divide-y">
+            <h2 class="sr-only">Toutes les informations sur l’événement</h2>
             <?php if ($contents): ?>
-                <article class="flex flex-col gap-8 rg:gap-15 max-rg:pb-12 rg:col-span-7 xg:col-span-8">
-                    <h3 class="sr-only">Contenu de l'événement</h3>
+                <div class="flex flex-col gap-8 rg:gap-15 max-rg:pb-12 rg:col-span-7 xg:col-span-8">
                     <?php foreach ($contents as $content):
                         $title = $content['title'];
                         $content = $content['paragraph'];
                         ?>
                         <div class="flex flex-col gap-2">
                             <?php if ($title): ?>
-                                <h4 class="text-xl rg:text-2xl font-medium text-brown"><?= $title ?></h4>
+                                <h3 class="text-xl rg:text-2xl font-medium text-brown"><?= $title ?></h3>
                             <?php endif; ?>
                             <?php if ($content): ?>
                                 <div class="event-content flex flex-col gap-6">
@@ -51,7 +51,7 @@ $contacts = get_field('contact');
                             <?php endif; ?>
                         </div>
                     <?php endforeach; ?>
-                </article>
+                </div>
             <?php endif; ?>
             <span aria-hidden="true" class="max-rg:hidden h-full w-full flex justify-center">
                 <span aria-hidden="true" class="block w-px h-full bg-beige-dark/60"></span>
@@ -92,7 +92,7 @@ $contacts = get_field('contact');
                                         <?php endif; ?>
                                         <?php if ($contact['tel']): ?>
                                             <li class="ml-4 mb-2">
-                                                <a href="tel:<?= $contact['tel'] ?>"
+                                                <a href="tel:<?= str_replace([' ', '(0)'], '', $contact['tel']) ?>"
                                                    aria-label="<?= $contact['tel'] ?>"
                                                    title="Téléphoner au <?= $contact['tel'] ?>">
                                                     <svg class="text-red" width="24" height="24" viewBox="0 0 24 24"
@@ -150,7 +150,7 @@ $contacts = get_field('contact');
                     </ul>
                 </div>
             </div>
-        </div>
+        </section>
         <a href="<?= get_post_type_archive_link($cpt_events['cpt_name']) ?>"
            class="btn-back-filled col-span-full justify-self-center"
            aria-label="Retour aux événéments"
@@ -158,4 +158,4 @@ $contacts = get_field('contact');
             Retour aux événéments
         </a>
     </div>
-</section>
+</div>

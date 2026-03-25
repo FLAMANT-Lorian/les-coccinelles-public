@@ -1,4 +1,4 @@
-<?php get_header(args: ['title' => 'Découvrez les futurs événements de l’asbl les Coccinelles']); ?>
+<?php get_header(); ?>
 
 <?php
 global $cpt_events;

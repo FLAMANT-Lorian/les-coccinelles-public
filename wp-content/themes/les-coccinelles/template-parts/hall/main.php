@@ -7,13 +7,13 @@ $images = $main['gallery'];
 
 ?>
 
-<section class="rg:bg-leaf-to-bottom-right rg:bg-no-repeat rg:bg-position-[top_110px_left_-110px]">
+<div class="rg:bg-leaf-to-bottom-right rg:bg-no-repeat rg:bg-position-[top_110px_left_-110px]">
     <div class="max-width-screen grid-default gap-y-8 rg:gap-y-15 px-default py-default">
         <div class="col-span-full md:col-start-2 md:col-span-6 rl:col-start-3 rl:col-span-4 lg:col-start-3 lg:col-span-8 xg:col-start-4 xg:col-span-6">
             <?php if ($title): ?>
-                <h2 class="text-2.5xl font-medium pb-2.5 md:text-center text-brown">
+                <h1 class="text-2.5xl font-medium pb-2.5 md:text-center text-brown">
                     <?= $title ?>
-                </h2>
+                </h1>
             <?php endif; ?>
             <?php if ($text): ?>
                 <div class="paragraph">
@@ -28,9 +28,9 @@ $images = $main['gallery'];
                         <a class="h-full w-full"
                            href="<?= $image['url'] ?>"
                            data-fancybox="hall-gallery"
-                           title="Voir l’image en grand"
-                           aria-label="Voir l’image en grand">
-                            <span class="sr-only">Voir l’image en grand</span>
+                           title="Voir l’image <?= $idx ?> en grand"
+                           aria-label="Voir l’image <?= $idx ?> en grand">
+                            <span class="sr-only">Voir l’image <?= $idx ?> en grand</span>
                             <?= wp_get_attachment_image($image['ID'], '1536x1536', attr: [
                                     'class' => 'h-full w-full object-cover max-rg:aspect-square',
                                     'alt' => $image['alt']
@@ -41,4 +41,4 @@ $images = $main['gallery'];
             <?php endif; ?>
         </div>
     </div>
-</section>
+</div>

@@ -42,9 +42,8 @@ $title = $args['title'] ?? false;
                 <span class="line line-3"></span>
             </label>
         </div>
-        <nav aria-hidden="false"
+        <div aria-hidden="false" role="navigation" aria-label="Navigation principale"
              class="nav-container max-lg:absolute max-lg:z-3 max-lg:h-svh max-lg:inset-0 trans-all max-lg:px-default max-lg:pb-6 max-lg:pt-24 max-lg:bg-beige-medium max-lg:flex max-lg:flex-col max-lg:gap-10">
-            <h2 class="sr-only">Navigation prinicpale</h2>
             <?= wp_nav_menu([
                     'theme_location' => 'primary',
                     'container' => false,
@@ -80,6 +79,6 @@ $title = $args['title'] ?? false;
                     <?php endif; ?>
                 </div>
             <?php endif; ?>
-        </nav>
+        </div>
     </div>
 </header>

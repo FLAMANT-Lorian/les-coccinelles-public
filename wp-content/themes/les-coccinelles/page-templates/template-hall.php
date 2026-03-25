@@ -1,6 +1,6 @@
 <?php /* Template Name: Hall */ ?>
 
-<?php get_header(args: ['title' => 'À propos de notre salle']); ?>
+<?php get_header(); ?>
 
 <?php get_template_part('template-parts/hall/main'); ?>
 <?php get_template_part('template-parts/hall/content'); ?>

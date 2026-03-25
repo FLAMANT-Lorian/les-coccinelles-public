@@ -9,7 +9,7 @@ $item = $args['history_item'] ?? false;
          class="history-card relative col-span-full lg:col-start-2 lg:col-span-10 grid grid-cols-4 md:grid-cols-8 rg:grid-cols-10 gap-x-5 gap-y-6">
         <div class="col-span-full md:col-span-4 flex flex-col gap-6">
             <?php if ($item['title']): ?>
-                <h3 itemprop="name" class="text-2xl rg:text-2.5xl font-medium text-brown"><?= $item['title']; ?></h3>
+                <h2 itemprop="name" class="text-2xl rg:text-2.5xl font-medium text-brown"><?= $item['title']; ?></h2>
             <?php endif; ?>
             <?php if ($item['text']): ?>
                 <div itemprop="description" class="paragraph">

@@ -1,5 +1,5 @@
 <?php
-const IS_VITE_DEVELOPMENT = true;
+const IS_VITE_DEVELOPMENT = false;
 
 function les_coccinelles_theme_setup(): void
 {

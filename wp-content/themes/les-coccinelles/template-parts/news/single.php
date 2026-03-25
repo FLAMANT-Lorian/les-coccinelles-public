@@ -7,11 +7,11 @@ $images = get_field('images');
 
 ?>
 
-<section class="rg:bg-leaf-to-top-left rg:bg-position-[right_-110px_bottom_110px] rg:bg-no-repeat">
+<div class="rg:bg-leaf-to-top-left rg:bg-position-[right_-110px_bottom_110px] rg:bg-no-repeat">
     <div class="max-width-screen px-default py-default grid-default gap-y-8">
         <div class="col-span-full md:col-span-4 lg:col-span-5 flex flex-col gap-y-4">
             <?php if ($title): ?>
-                <h2 class="text-2.5xl lg:text-4.5xl leading-9 lg:leading-11 font-medium text-brown"><?= $title ?></h2>
+                <h1 class="text-2.5xl lg:text-4.5xl leading-9 lg:leading-11 font-medium text-brown"><?= $title ?></h1>
             <?php endif; ?>
             <?php if ($date): ?>
                 <div class="flex flex-row gap-2 items-center text-brown">
@@ -34,7 +34,7 @@ $images = get_field('images');
         <?php if ($images): ?>
             <div class="col-span-full md:col-span-4 md:col-start-6 lg:col-start-7 lg:col-span-6 mt-2 grid lg:grid-cols-2 lg:grid-rows-[repeat(3,200px)] gap-6">
                 <?php foreach ($images as $index => $image): $index++;
-                
+                    
                     $classes = [
                             1 => 'lg:h-106 lg:row-span-2 lg:col-span-1 lg:col-start-1 lg:row-start-1',
                             2 => 'lg:h-50 lg:col-span-1 lg:col-start-2 lg:row-start-1',
@@ -63,4 +63,4 @@ $images = get_field('images');
             Retour aux actualités
         </a>
     </div>
-</section>
+</div>

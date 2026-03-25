@@ -2,6 +2,7 @@ import {settings as s} from "../settings";
 
 (function () {
     const search = {
+        form: document.querySelector(s.form.search_form_class),
         init() {
             addEventListener('DOMContentLoaded', () => {
                 if (document.querySelector(s.news.search_news_input)) {
@@ -13,7 +14,10 @@ import {settings as s} from "../settings";
                     this.eventsWrapper = document.querySelector(s.events.events_wrapper);
                     this.handleSearch('events', this.searchEventsInput, this.eventsWrapper);
                 }
+            });
 
+            this.form.addEventListener('submit', e => {
+                e.preventDefault();
             });
         },
 

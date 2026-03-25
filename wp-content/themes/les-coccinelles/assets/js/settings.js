@@ -24,5 +24,6 @@ export const settings = {
         'acceptance_field': '.acceptance-field input',
         'submit_button': '.submit-button',
         'form_class': '.form',
+        'search_form_class': '.search-form'
     }
 }

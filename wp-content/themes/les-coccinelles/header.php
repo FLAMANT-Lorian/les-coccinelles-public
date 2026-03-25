@@ -14,9 +14,7 @@
     wp_body_open();
     include 'inc/svg.php';
     
-    $title = $args['title'] ?? false;
-    
-    get_template_part('template-parts/header/header', args: ['title' => $title]);
+    get_template_part('template-parts/header/header');
     
     get_template_part('template-parts/breadcrumb/breadcrumb');
     
