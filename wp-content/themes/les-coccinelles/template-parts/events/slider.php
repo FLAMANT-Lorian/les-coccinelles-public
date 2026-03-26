@@ -19,7 +19,11 @@ $index = 1;
     <section class="bg-beige-medium slider">
         <div class="max-width-screen px-default py-default grid-default gap-y-8 rg:gap-y-12">
             <?php if ($title): ?>
-                <h2 class="col-span-full lg:col-start-4 lg:col-span-6 text-center text-brown text-big"><?= $title ?></h2>
+                <h2 data-text-reveal data-dir="top" class="col-span-full lg:col-start-4 lg:col-span-6 text-center text-brown text-big">
+                    <span class="mask-content">
+                        <?= $title ?>
+                    </span>
+                </h2>
             <?php endif; ?>
             <div class="slider-track col-span-full flex flex-row md:grid md:grid-cols-8 lg:grid-cols-12 gap-4 overflow-x-scroll snap-mandatory snap-x">
                 <?php while ($news->have_posts()): $news->the_post(); ?>

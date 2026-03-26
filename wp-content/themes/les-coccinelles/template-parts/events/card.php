@@ -49,7 +49,12 @@ $facebook_link = get_field('facebook-link');
             <?php endif; ?>
         </div>
         <?php if ($title): ?>
-            <h3 itemprop="name" class="text-xl rl:text-2.5xl text-brown font-medium pb-2"><?= $title ?></h3>
+            <h3 data-text-reveal data-dir="left" itemprop="name"
+                class="text-xl rl:text-2.5xl text-brown font-medium pb-2">
+                <span class="mask-content">
+                    <?= $title ?>
+                </span>
+            </h3>
         <?php endif; ?>
         <?php if ($excerpt): ?>
             <p itemprop="description" class="paragraph line-clamp-3 mb-4"><?= $excerpt ?></p>

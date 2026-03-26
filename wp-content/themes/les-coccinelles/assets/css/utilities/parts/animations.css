@@ -2,3 +2,11 @@
 @utility trans-all {
     @apply transition-all ease-in-out duration-400;
 }
+
+[data-text-reveal], [data-img-reveal] {
+    @apply overflow-hidden;
+}
+
+.mask-content {
+    @apply inline-block;
+}

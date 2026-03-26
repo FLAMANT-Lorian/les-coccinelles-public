@@ -33,7 +33,11 @@ $date = get_the_date('d F Y');
         </span>
         <?php endif; ?>
         <?php if ($title): ?>
-            <h3 itemprop="headline" class="text-xl rg:text-2xl-fixed font-medium mb-3 text-brown"><?= $title ?></h3>
+            <h3 data-text-reveal data-dir="left" itemprop="headline" class="text-xl rg:text-2xl-fixed font-medium mb-3 text-brown">
+                <span class="mask-content">
+                    <?= $title ?>
+                </span>
+            </h3>
         <?php endif; ?>
         <?php if ($excerpt): ?>
             <p itemprop="description" class="text-base text-gray rg:text-lg line-clamp-3 mb-4"><?= $excerpt ?></p>

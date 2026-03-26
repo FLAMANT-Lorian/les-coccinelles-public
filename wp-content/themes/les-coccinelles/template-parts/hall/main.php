@@ -11,13 +11,17 @@ $images = $main['gallery'];
     <div class="max-width-screen grid-default gap-y-8 rg:gap-y-15 px-default py-default">
         <div class="col-span-full md:col-start-2 md:col-span-6 rl:col-start-3 rl:col-span-4 lg:col-start-3 lg:col-span-8 xg:col-start-4 xg:col-span-6">
             <?php if ($title): ?>
-                <h1 class="text-2.5xl font-medium pb-2.5 md:text-center text-brown">
-                    <?= $title ?>
+                <h1 data-text-reveal data-dir="top" class="text-2.5xl font-medium pb-2.5 md:text-center text-brown">
+                    <span class="mask-content">
+                        <?= $title ?>
+                    </span>
                 </h1>
             <?php endif; ?>
             <?php if ($text): ?>
-                <div class="paragraph">
-                    <?= $text ?>
+                <div data-text-reveal data-dir="left" class="paragraph">
+                    <div class="mask-content">
+                        <?= $text ?>
+                    </div>
                 </div>
             <?php endif; ?>
         </div>

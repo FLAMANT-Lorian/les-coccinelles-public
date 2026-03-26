@@ -10,10 +10,20 @@ $bg_image = $banner['bg-image'];
         <div class="max-width-screen h-[calc(100svh-96px)] rg:h-[calc(100svh-112px)] px-default py-default grid-default">
             <div class="col-span-full md:col-start-2 md:col-span-6 lg:col-start-3 lg:col-span-8 flex flex-col lg:grid lg:grid-cols-subgrid gap-y-6 items-center justify-center text-white">
                 <?php if ($title): ?>
-                    <h1 class="text-banner-title font-medium text-center lg:col-span-full lg:self-end"><?= $title ?></h1>
+                    <h1 data-text-reveal data-dir="top"
+                        class="text-banner-title font-medium text-center lg:col-span-full lg:self-end">
+                        <span class="mask-content">
+                            <?= $title ?>
+                        </span>
+                    </h1>
                 <?php endif; ?>
                 <?php if ($text): ?>
-                    <p itemprop="description" class="text-banner-text font-normal text-center lg:col-start-2 lg:col-span-6 lg:self-start"><?= $text ?></p>
+                    <div data-text-reveal data-dir="top" itemprop="description"
+                         class="text-banner-text font-normal text-center lg:col-start-2 lg:col-span-6 lg:self-start">
+                        <p class="mask-content">
+                            <?= $text ?>
+                        </p>
+                    </div>
                 <?php endif; ?>
             </div>
         </div>

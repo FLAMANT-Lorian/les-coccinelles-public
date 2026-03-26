@@ -26,8 +26,16 @@ if (get_the_id() === 88) {
 <div class="rg:bg-leaf-to-bottom-right rg:bg-position-[top_-60px_left_-60px] rg:bg-no-repeat">
     <div class="max-width-screen px-default py-default grid-default gap-y-12">
         <div class="col-span-full text-center flex flex-col gap-y-2">
-            <span class="text-xl rg:text-2xl text-red font-medium uppercase">RGPD</span>
-            <h1 class="text-big text-brown"><?= $subtitle ?></h1>
+            <span data-text-reveal data-dir="top" class="text-xl rg:text-2xl text-red font-medium uppercase">
+                <span class="mask-content">
+                    RGPD
+                </span>
+            </span>
+            <h1 data-text-reveal data-dir="top" class="text-big text-brown">
+                <span class="mask-content">
+                    <?= $subtitle ?>
+                </span>
+            </h1>
         </div>
         <section class="col-span-full <?= $classes ?> gap-y-8">
             <h2 class="sr-only">Contenu de <?= strtolower($subtitle) ?></h2>

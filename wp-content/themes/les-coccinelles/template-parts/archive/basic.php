@@ -21,10 +21,18 @@ $value = $term;
     <div class="max-width-screen px-default py-default grid-default gap-y-8">
         <div class="col-span-full text-center flex flex-col gap-y-2">
             <?php if ($subtitle): ?>
-                <h1 class="text-xl rg:text-2xl text-red font-medium uppercase"><?= $subtitle ?></h1>
+                <h1 data-text-reveal data-dir="top" class="text-xl rg:text-2xl text-red font-medium uppercase">
+                    <span class="mask-content">
+                        <?= $subtitle ?>
+                    </span>
+                </h1>
             <?php endif; ?>
             <?php if ($title): ?>
-                <span class="text-big text-brown"><?= $title ?></span>
+                <span data-text-reveal data-dir="top" class="text-big text-brown">
+                    <span class="mask-content">
+                        <?= $title ?>
+                    </span>
+                </span>
             <?php endif; ?>
         </div>
         <section class="col-span-full grid-default gap-y-8">

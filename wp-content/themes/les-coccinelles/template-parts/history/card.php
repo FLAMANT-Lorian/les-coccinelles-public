@@ -1,6 +1,7 @@
 <?php
 
 $item = $args['history_item'] ?? false;
+$index = $args['index'] ?? null;
 
 ?>
 
@@ -9,27 +10,42 @@ $item = $args['history_item'] ?? false;
          class="history-card relative col-span-full lg:col-start-2 lg:col-span-10 grid grid-cols-4 md:grid-cols-8 rg:grid-cols-10 gap-x-5 gap-y-6">
         <div class="col-span-full md:col-span-4 flex flex-col gap-6">
             <?php if ($item['title']): ?>
-                <h2 itemprop="name" class="text-2xl rg:text-2.5xl font-medium text-brown"><?= $item['title']; ?></h2>
+                <h2 data-text-reveal data-dir="top" itemprop="name"
+                    class="text-2xl rg:text-2.5xl font-medium text-brown">
+                    <span class="mask-content">
+                        <?= $item['title']; ?>
+                    </span>
+                </h2>
             <?php endif; ?>
             <?php if ($item['text']): ?>
-                <div itemprop="description" class="paragraph">
-                    <?= $item['text']; ?>
+                <div data-text-reveal data-dir="left">
+                    <div itemprop="description" class="mask-content paragraph">
+                        <?= $item['text']; ?>
+                    </div>
                 </div>
             <?php endif; ?>
         </div>
-        <div class="col-span-full md:col-span-4 max-rg:relative">
+        <div class="col-span-full md:col-span-4 max-rg:relative overflow-hidden">
             <?php if ($item['year']): ?>
-                <time datetime="<?= $item['year']; ?>"
-                      class="absolute z-1 bottom-4 right-4 px-2 py-1 bg-red text-white "><?= $item['year']; ?></time>
+                <time data-text-reveal data-dir="top" datetime="<?= $item['year']; ?>"
+                      class="absolute z-1 bottom-4 right-4 px-2 py-1 bg-red text-white ">
+                    <span class="mask-content">
+                        <?= $item['year']; ?>
+                    </span>
+                </time>
             <?php endif; ?>
             <?php if ($item['image']): ?>
                 <a href="<?= $item['image']['url'] ?>"
                    data-fancybox="history-item"
                    title="Voir l’image en grand"
-                   aria-label="Voir l’image en grand">
+                   aria-label="Voir l’image en grand"
+                   class="overflow-hidden"
+                   data-img-reveal
+                   data-dir="<?= $index % 2 === 0 ? 'right' : 'left' ?>"
+                >
                     <span class="sr-only">Voir l’image en grand</span>
                     <?= wp_get_attachment_image($item['image']['ID'], 'large', attr: [
-                            'class' => 'max-h-64 rg:max-h-80 w-full object-cover',
+                            'class' => 'mask-content max-h-64 rg:max-h-80 w-full object-cover',
                             'alt' => $item['image']['alt'],
                     ]); ?>
                 </a>

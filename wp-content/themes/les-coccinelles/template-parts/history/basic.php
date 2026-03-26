@@ -9,9 +9,12 @@ $history_items = get_field('history');
         <h1 class="sr-only">Historique de l’asbl Les Coccinelles</h1>
         <?php if ($history_items): ?>
             <div class="history rg:py-default grid-default gap-y-16" itemscope itemtype="https://schema.org/ItemList">
-                <?php foreach ($history_items as $history_item): ?>
+                <?php foreach ($history_items as $index => $history_item): ?>
                     
-                    <?php get_template_part('template-parts/history/card', args: ['history_item' => $history_item]); ?>
+                    <?php get_template_part('template-parts/history/card', args: [
+                            'history_item' => $history_item,
+                            'index' => $index
+                    ]); ?>
                 
                 <?php endforeach; ?>
             </div>

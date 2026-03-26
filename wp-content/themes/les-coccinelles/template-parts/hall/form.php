@@ -17,7 +17,12 @@ $calendar_title = $form['calendar-title'];
 <section class="bg-beige-medium">
     <div class="max-width-screen py-default px-default grid-default">
         <?php if ($title): ?>
-            <h2 class="col-span-full text-center text-3xl lg:text-4.5xl font-medium text-brown mb-8 rl:mb-15"><?= $title ?></h2>
+            <h2 data-text-reveal data-dir="top"
+                class="col-span-full text-center text-3xl lg:text-4.5xl font-medium text-brown mb-8 rl:mb-15">
+                <span class="mask-content">
+                    <?= $title ?>
+                </span>
+            </h2>
         <?php endif; ?>
         <div class="col-span-full grid grid-default max-lg:divide-y max-lg:divide-beige-dark/60">
             <div class="form col-span-full rl:col-start-2 rl:col-span-6 lg:col-start-1 lg:col-span-7 max-lg:pb-8">

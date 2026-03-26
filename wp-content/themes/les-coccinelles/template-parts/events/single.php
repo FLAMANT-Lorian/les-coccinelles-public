@@ -17,8 +17,10 @@ $contacts = get_field('contact');
 <div class="rg:bg-leaf-to-bottom-right rg:bg-position-[top_110px_left_-110px] rg:bg-no-repeat">
     <div class="px-default py-default grid-default gap-y-8 md:gap-y-12 max-width-screen">
         <?php if ($title): ?>
-            <h1 class="text-2.5xl rg:text-4.5xl col-span-full text-center max-rg:mb-8 text-brown font-medium">
-                <?= $title ?>
+            <h1 data-text-reveal data-dir="top" class="text-2.5xl rg:text-4.5xl col-span-full text-center max-rg:mb-8 text-brown font-medium">
+                <span class="mask-content">
+                    <?= $title ?>
+                </span>
             </h1>
         <?php endif; ?>
         <?php if ($thumbnail): ?>

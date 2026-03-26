@@ -11,7 +11,11 @@ $images = get_field('images');
     <div class="max-width-screen px-default py-default grid-default gap-y-8">
         <div class="col-span-full md:col-span-4 lg:col-span-5 flex flex-col gap-y-4">
             <?php if ($title): ?>
-                <h1 class="text-2.5xl lg:text-4.5xl leading-9 lg:leading-11 font-medium text-brown"><?= $title ?></h1>
+                <h1 data-text-reveal data-dir="top" class="text-2.5xl lg:text-4.5xl leading-9 lg:leading-11 font-medium text-brown">
+                    <span class="mask-content">
+                        <?= $title ?>
+                    </span>
+                </h1>
             <?php endif; ?>
             <?php if ($date): ?>
                 <div class="flex flex-row gap-2 items-center text-brown">

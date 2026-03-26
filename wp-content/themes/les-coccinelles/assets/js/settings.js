@@ -25,5 +25,17 @@ export const settings = {
         'submit_button': '.submit-button',
         'form_class': '.form',
         'search_form_class': '.search-form'
+    },
+    animation: {
+        'text_reveal_selector': '[data-text-reveal]:has(.mask-content)',
+        'img_reveal_selector': '[data-img-reveal]:has(.mask-content)',
+        'text_reveal': {
+            'duration': 0.5,
+            'ease': 'power1.out'
+        },
+        'img_reveal': {
+            'duration': 0.8,
+            'ease': 'power2.out'
+        }
     }
 }

@@ -17,10 +17,18 @@ $access_plan = $contact['access-plan'];
     <div class="max-width-screen px-default py-default grid-default gap-y-8 lg:gap-y-15">
         <div class="col-span-full text-center flex flex-col gap-y-2">
             <?php if ($subtitle): ?>
-                <h1 class="text-xl rg:text-2xl text-red font-medium"><?= $subtitle ?></h1>
+                <h1 data-text-reveal data-dir="top" class="text-xl rg:text-2xl text-red font-medium">
+                    <span class="mask-content">
+                        <?= $subtitle ?>
+                    </span>
+                </h1>
             <?php endif; ?>
             <?php if ($title): ?>
-                <span class="text-big text-brown"><?= $title ?></span>
+                <span data-text-reveal data-dir="top" class="text-big text-brown">
+                    <span class="mask-content">
+                        <?= $title ?>
+                    </span>
+                </span>
             <?php endif; ?>
         </div>
         <section class="col-span-full grid grid-default max-lg:divide-y max-lg:divide-beige-dark/60">
@@ -37,7 +45,8 @@ $access_plan = $contact['access-plan'];
                     <div class="flex flex-col md:flex-row gap-6">
                         <div class="acceptance-field">
                             <input type="checkbox" id="acceptance" class="cursor-pointer">
-                            <label for="acceptance" class="cursor-pointer">J’accepte que mes données soient utilisées pour me recontacter et me
+                            <label for="acceptance" class="cursor-pointer">J’accepte que mes données soient utilisées
+                                pour me recontacter et me
                                 tenir informé(e) des actualités et événements. Elles resteront confidentielles et ne
                                 seront jamais partagées à des tiers.</label>
                         </div>
