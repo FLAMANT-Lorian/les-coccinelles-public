@@ -77,7 +77,7 @@
 
         .menu-item a {
             @apply opacity-100 duration-300 ease-in-out;
-            animation: primary-nav-item-in;
+            animation: animate-menu-item;
         }
 
         .menu-item:nth-of-type(1) a {
@@ -117,7 +117,7 @@
         }
     }
 
-    @keyframes primary-nav-item-in {
+    @keyframes animate-menu-item {
         from {
             opacity: 0;
         }
