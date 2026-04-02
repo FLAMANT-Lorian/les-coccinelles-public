@@ -17,7 +17,7 @@ $image = get_sub_field('image');
     <div class="grid-default lg:grid-cols-10 gap-y-6">
         <?php if ($title): ?>
             <h3 itemprop="name"
-                class="sticky self-start top-6 text-2xl font-medium text-brown col-span-full md:col-span-3 ">
+                class="md:sticky self-start md:top-6 text-2xl font-medium text-brown col-span-full md:col-span-3 ">
                 <?= $title ?>
             </h3>
         <?php endif; ?>
