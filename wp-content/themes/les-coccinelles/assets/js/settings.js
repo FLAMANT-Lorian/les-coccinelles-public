@@ -24,6 +24,7 @@ export const settings = {
         'acceptance_field': '.acceptance-field input',
         'submit_button': '.submit-button',
         'form_class': '.form',
+        'form_request_class': '.form-request',
         'search_form_class': '.search-form'
     },
     animation: {
@@ -37,5 +38,5 @@ export const settings = {
             'duration': 0.8,
             'ease': 'power2.out'
         }
-    }
+    },
 }

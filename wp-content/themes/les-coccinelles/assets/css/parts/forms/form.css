@@ -1,6 +1,9 @@
 .field {
     @apply relative;
 }
+.error {
+    @apply text-red absolute -bottom-6;
+}
 
 .search-input {
     @apply w-64 pl-14 relative trans-all;

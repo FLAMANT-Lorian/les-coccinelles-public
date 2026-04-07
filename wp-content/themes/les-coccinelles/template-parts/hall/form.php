@@ -25,30 +25,13 @@ $calendar_title = $form['calendar-title'];
             </h2>
         <?php endif; ?>
         <div class="col-span-full grid grid-default max-lg:divide-y max-lg:divide-beige-dark/60">
-            <div class="form col-span-full rl:col-start-2 rl:col-span-6 lg:col-start-1 lg:col-span-7 max-lg:pb-8">
+            <div class="relative form col-span-full rl:col-start-2 rl:col-span-6 lg:col-start-1 lg:col-span-7 max-lg:pb-8">
                 <h3 class="sr-only">Formulaire de contact</h3>
                 <p class="paragraph mb-6">Les champs renseignés avec <strong class="text-red">*</strong> sont requis !
                 </p>
-                <form action="" method="POST" class="flex flex-col gap-y-6" novalidate>
-                    
-                    <?php get_template_part('template-parts/forms/fieldset', args: [
-                            'hidden_input_type' => 'location'
-                    ]); ?>
-                    
-                    <div class="flex flex-col md:flex-row gap-6">
-                        <div class="acceptance-field">
-                            <input type="checkbox" id="acceptance" class="cursor-pointer">
-                            <label for="acceptance" class="cursor-pointer">J’accepte que mes informations soient
-                                utilisées pour répondre à ma demande de disponibilité et pour me recontacter concernant
-                                la location de la salle. Elles resteront confidentielles et ne seront jamais partagées à
-                                des tiers.</label>
-                        </div>
-                        <button type="submit"
-                                class="submit-button self-end md:self-center btn py-3 bg-red border border-red text-white hover:text-brown hover:bg-transparent focus:text-brown focus:bg-transparent cursor-pointer">
-                            Envoyer
-                        </button>
-                    </div>
-                </form>
+                <?php get_template_part('template-parts/forms/fieldset', args: [
+                        'hidden_input_type' => 'booking'
+                ]); ?>
             </div>
             <span aria-hidden="true" class="max-lg:hidden flex justify-center">
                 <span class="h-full w-px bg-beige-dark/60"></span>

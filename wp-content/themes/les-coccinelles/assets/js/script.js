@@ -4,3 +4,4 @@ import './scripts/slider.js';
 import './plugins/fancybox.js';
 import './scripts/search.js';
 import './scripts/form.js';
+import './scripts/form-request.js';
