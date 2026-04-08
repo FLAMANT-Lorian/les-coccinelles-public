@@ -53,7 +53,7 @@ import {settings as s} from "../settings";
                 const message = result.message ?? '';
                 const homeUrl = '/';
                 this.form.insertAdjacentHTML('beforebegin', `
-<div class="max-w-100 flex flex-col items-center gap-y-8 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
+<div class="max-lg:mx-auto max-lg:h-80 max-w-100 flex flex-col items-center justify-center gap-y-8 lg:absolute lg:top-1/2 lg:left-1/2 lg:-translate-x-1/2 lg:-translate-y-1/2">
     <p class="text-center paragraph">${message}</p>
     <a href="${homeUrl}" aria-label="Retour à l'accueil" title="Retour à l'accueil" class="btn-back-filled">
         Retour à l'accueil
