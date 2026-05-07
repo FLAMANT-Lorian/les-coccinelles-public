@@ -30,7 +30,7 @@ $calendar_title = $form['calendar-title'];
                 <p class="paragraph mb-6">Les champs renseignés avec <strong class="text-red">*</strong> sont requis !
                 </p>
                 <?php get_template_part('template-parts/forms/fieldset', args: [
-                        'hidden_input_type' => 'booking'
+                        'hidden_input_type' => 'availability_request'
                 ]); ?>
             </div>
             <span aria-hidden="true" class="max-lg:hidden flex justify-center">

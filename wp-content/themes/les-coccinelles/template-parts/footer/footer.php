@@ -17,10 +17,11 @@ $facebook = $social_networks['facebook'];
     <div class="max-width-screen px-default py-12 grid-default gap-y-10 lg:gap-y-16">
         <div class="flex flex-col gap-6 col-span-4">
             <a href="<?= home_url() ?>"
+               class="max-md:self-center"
                aria-label="Aller vers la page d’accueil"
                title="Aller vers la page d’accueil">
                 <span class="sr-only">Aller vers la page d'accueil</span>
-                <svg class="max-md:self-center" width="188" height="55" viewBox="0 0 300 88" fill="none"
+                <svg width="188" height="55" viewBox="0 0 300 88" fill="none"
                      xmlns="http://www.w3.org/2000/svg">
                     <use xlink:href="#logo-inversed"></use>
                 </svg>

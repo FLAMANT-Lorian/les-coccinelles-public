@@ -2,7 +2,7 @@
 
 const IS_VITE_DEVELOPMENT = false;
 
-function les_coccinelles_theme_setup(): void
+function les_coccinelles_theme_setup() : void
 {
     add_theme_support('title-tag');
     add_theme_support('menus');
