@@ -94,6 +94,11 @@ $calendar_title = $form['calendar-title'];
                 <div class="calendar flex flex-col gap-y-4 md:w-1/2 lg:w-full">
                     <?php if ($calendar_title): ?>
                         <h3 class="text-xl rg:text-2xl font-medium"><?= $calendar_title ?></h3>
+                        <div id="hall-calendar" class="" data-url="<?= LARAVEL_API_URL . '/bookings' ?>"></div>
+                        <div class="flex flex-row justify-center gap-x-8 mt-4 pt-4 border-t border-t-beige-dark/60">
+                            <span class="flex flex-row items-center gap-4 before:content-[''] before:w-3 before:h-3 before:bg-red before:rounded-full before:block">Indisponible</span>
+                            <span class="flex flex-row items-center gap-4 before:content-[''] before:w-3 before:h-3 before:bg-beige-light before:border before:border-beige-dark before:rounded-full before:block">Disponible</span>
+                        </div>
                     <?php endif; ?>
                 </div>
             </div>

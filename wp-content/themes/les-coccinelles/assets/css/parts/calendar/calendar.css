@@ -1,0 +1,38 @@
+.vc {
+    @apply bg-transparent! p-0!;
+}
+
+.vc-header__content button {
+    @apply paragraph! text-brown! font-medium! hover:text-red! focus:text-red! trans-all!;
+}
+
+.vc-arrow:before {
+    @apply trans-all!;
+}
+
+.vc-week {
+    @apply gap-4!;
+
+    .vc-week__day {
+        @apply text-sm! text-brown! font-medium!;
+    }
+}
+
+.vc-dates {
+    @apply gap-4!;
+}
+
+.vc-dates__row {
+    @apply gap-4!;
+}
+
+.vc-date {
+    @apply p-0! w-10! h-10! rounded-full! overflow-hidden!;
+    button {
+        @apply bg-beige-light! p-0! text-brown!;
+    }
+}
+
+.vc-date[data-vc-date-disabled] button {
+    @apply bg-red! text-white!;
+}

@@ -23,7 +23,7 @@
 }
 
 input, textarea {
-    @apply py-3 px-4 outline outline-beige-dark text-brown;
+    @apply py-3 px-4 outline outline-beige-dark text-brown trans-all;
 
     &::placeholder {
         @apply text-beige-dark;

@@ -39,7 +39,7 @@ if ($success && $token) {
     <?php return; ?>
 <?php endif; ?>
 
-<form action="http://les-coccinelles.test/api/public-form-request" method="POST"
+<form action="<?= LARAVEL_API_URL . '/public-form-request' ?>" method="POST"
       class="form-request flex flex-col gap-y-8" novalidate>
     <fieldset class="grid grid-col-1 md:grid-cols-2 gap-8">
         <legend class="sr-only">Informations principales</legend>
