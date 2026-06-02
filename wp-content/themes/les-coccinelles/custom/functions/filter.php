@@ -4,9 +4,10 @@ if (!function_exists('searchInPost')) {
     function searchInPost(): void
     {
         $term = sanitize_text_field($_POST['search']);
-        $cpt_name = $_POST['cpt_name'];
+        $order = sanitize_text_field($_POST['order']);
+        $cpt_name = sanitize_text_field($_POST['cpt_name']);
 
-        $content = get_filtered_items($term, $cpt_name);
+        $content = get_filtered_items($term, $order, $cpt_name);
 
         wp_send_json_success(['html' => $content]);
 
@@ -17,19 +18,31 @@ add_action('wp_ajax_search_in_post', 'searchInPost');
 add_action('wp_ajax_nopriv_search_in_post', 'searchInPost');
 
 if (!function_exists('get_filtered_items')) {
-    function get_filtered_items($term = '', $cpt_name = ''): string
+    function get_filtered_items($term = '', $order = '', $cpt_name = ''): string
     {
         global $content, $card, $cpt_events, $cpt_news;
 
         $query_args = [
             'post_type' => $cpt_name,
             'paged' => get_query_var('paged'),
-            'search_prod_title' => $term
         ];
 
-        add_filter('posts_where', 'filter_by_title', accepted_args: 2);
+        if (!empty($term)) {
+            $query_args['search_prod_title'] = $term;
+            add_filter('posts_where', 'filter_by_title', 10, 2);
+        }
+
+        if (!empty($order) && ($cpt_name === $cpt_events['cpt_name'])) {
+            $query_args['meta_key'] = 'date';
+            $query_args['orderby'] = 'meta_value_num';
+            $query_args['order'] = $order;
+        }
+
         $items = new WP_Query($query_args);
-        remove_filter('posts_where', 'filter_by_title');
+
+        if (!empty($term)) {
+            remove_filter('posts_where', 'filter_by_title');
+        }
 
         $content = '';
         $index = 1;

@@ -22,7 +22,7 @@
     }
 }
 
-input, textarea {
+input, textarea, select {
     @apply py-3 px-4 outline outline-beige-dark text-brown trans-all;
 
     &::placeholder {

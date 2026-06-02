@@ -6,14 +6,17 @@ $cpt_name = $args['cpt_name'] ?? false;
 $form_id = $args['form_id'] ?? false;
 $inputClass = $args['input_class'] ?? false;
 $wrapperClass = $args['wrapper_class'] ?? false;
+$filter = $args['filter'] ?? false;
 
 $title = get_field('title', $id);
 $subtitle = get_field('subtitle', $id);
 
 /* SEARCH */
 $term = esc_html($_GET['search'] ?? '');
-$content = get_filtered_items($term, $cpt_name);
-$value = $term;
+$order = esc_html($_GET['order'] ?? '');
+$content = get_filtered_items($term, $order, $cpt_name);
+$search_value = $term;
+$select_value = $order;
 
 ?>
 
@@ -39,15 +42,21 @@ $value = $term;
             <h2 class="sr-only"><?= $cpt_name === $cpt_news['cpt_name'] ? 'Liste des actualités' : 'Liste des événements' ?></h2>
             <form id="<?= $form_id ?>" action="<?= get_post_type_archive_link($cpt_name) ?>" method="get"
                   class="search-form col-span-full justify-self-center rg:justify-self-end <?= $cpt_name === $cpt_events['cpt_name'] ? 'xg:col-end-12' : '' ?>">
-                <fieldset>
+                <fieldset class="flex flex-col md:flex-row gap-4">
                     <legend class="sr-only">Effectuer une recherche</legend>
                     <?php get_template_part('template-parts/forms/input/search', args: [
                             'name' => 'search',
                             'label' => 'Rechercher',
                             'placeholder' => 'Rechercher',
                             'class' => $inputClass,
-                            'value' => !empty($value) ? $value : false
+                            'value' => !empty($search_value) ? $search_value : false
                     ]); ?>
+                    
+                    <?php if ($filter): ?>
+                        <?php get_template_part('template-parts/forms/input/event-filter-select', args: [
+                                'value' => $select_value === 'none' ? 'ASC' : $select_value
+                        ]); ?>
+                    <?php endif; ?>
                 </fieldset>
                 <input class="sr-only" type="submit" value="Rechercher">
             </form>

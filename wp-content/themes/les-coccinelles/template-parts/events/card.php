@@ -14,20 +14,14 @@ $facebook_link = get_field('facebook-link');
 
 <article itemscope itemtype="https://schema.org/Event" itemprop="event"
          id="<?= $index ?>"
-         class="events-card relative flex flex-col md:flex-row md:h-62 rg:h-70 border border-beige-dark max-md:min-w-[calc(100vw-48px)]">
-    <div class="relative md:w-1/2 h-full">
-        <?php if ($thumbnail): ?>
-            <div class="overflow-hidden [&_img]:trans-all h-62 sm:h-70 md:h-full">
-                <?= $thumbnail ?>
-            </div>
-        <?php endif; ?>
-        <?php if ($date && $hour): ?>
-            <p class="first-letter:uppercase px-4 py-1 bg-red text-white absolute bottom-4 left-4"><?= $date ?>
-                à <?= $hour ?></p>
-        <?php endif; ?>
-    </div>
-    <div class="p-6 rl:p-8 bg-beige-light md:grow md:w-1/2 flex flex-col">
-        <div class="flex flex-row gap-2 justify-between items-center mb-4">
+         class="events-card relative flex flex-col md:flex-row border border-beige-dark max-md:min-w-[calc(100vw-48px)]">
+    <?php if ($thumbnail): ?>
+        <div class="overflow-hidden [&_img]:trans-all object-cover md:aspect-2/1 md:w-1/2">
+            <?= $thumbnail ?>
+        </div>
+    <?php endif; ?>
+    <div class="p-6 rl:p-8 bg-beige-light md:w-1/2 flex flex-col">
+        <div class="flex flex-row gap-2 justify-between items-center">
             <?php if ($address): ?>
                 <p class="text-gray flex flex-col gap-1 before:content-[''] before:w-6 before:h-px before:bg-red">
                     <?= $address ?>
@@ -48,6 +42,12 @@ $facebook_link = get_field('facebook-link');
                 </a>
             <?php endif; ?>
         </div>
+        <?php if ($date && $hour): ?>
+            <p class="first-letter:uppercase px-4 py-1 bg-red text-white self-start my-4">
+                <?= $date ?> à <?= $hour ?>
+            </p>
+        <?php endif; ?>
+        
         <?php if ($title): ?>
             <h3 data-text-reveal data-dir="left" itemprop="name"
                 class="text-xl rl:text-2.5xl text-brown font-medium pb-2">
@@ -57,7 +57,7 @@ $facebook_link = get_field('facebook-link');
             </h3>
         <?php endif; ?>
         <?php if ($excerpt): ?>
-            <p itemprop="description" class="paragraph line-clamp-3 mb-4"><?= $excerpt ?></p>
+            <p itemprop="description" class="paragraph mb-4"><?= $excerpt ?></p>
         <?php endif; ?>
         <span class="more-text text-base text-red font-medium mt-auto">En savoir plus</span>
     </div>

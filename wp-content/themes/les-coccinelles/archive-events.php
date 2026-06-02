@@ -8,6 +8,7 @@ get_template_part('template-parts/archive/basic', args: [
     'form_id' => 'search-events-form',
     'input_class' => 'events-search-input',
     'wrapper_class' => 'events-wrapper',
+    'filter' => true
 ]); ?>
 
 <?php get_footer(); ?>
