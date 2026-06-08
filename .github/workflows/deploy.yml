@@ -1,4 +1,4 @@
-name: 'Deploy'
+name: Deploy to Forge
 
 on:
   push:
@@ -6,13 +6,10 @@ on:
       - main
 
 jobs:
-  forge-deploy:
-    name: 'Laravel Forge Deploy'
+  deploy:
+    name: Trigger Forge Deploy
     runs-on: ubuntu-22.04
 
     steps:
-      # Trigger Laravel Forge Deploy
       - name: Deploy
-        uses: jbrooksuk/laravel-forge-action@v1.0.2
-        with:
-          trigger_url: ${{ secrets.FORGE_DEPLOY_HOOK }}
+        run: curl -f -X POST "${{ secrets.FORGE_DEPLOY_HOOK }}"
