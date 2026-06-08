@@ -11,6 +11,4 @@ jobs:
 
     steps:
       - name: Trigger Forge Deploy
-        run: |
-          echo "RAW:"
-          printf '%q\n' "${{ secrets.FORGE_DEPLOY_HOOK }}"
+        run: curl -f "${{ secrets.FORGE_DEPLOY_HOOK }}"
