@@ -8,14 +8,24 @@ import {settings as s} from "../settings";
         navContainer: document.querySelector(s.menu.nav_container),
 
         init() {
-            this.setup();
+            this.setup(window.innerWidth);
             this.handleAccessibility();
             this.closeMenuOnEscape();
+
+            addEventListener('resize', e => {
+                this.setup(e.currentTarget.innerWidth);
+            })
         },
 
-        setup() {
-            this.navContainer.setAttribute('aria-hidden', 'true');
-            this.navContainer.setAttribute('inert', '');
+        setup(width) {
+            if (width > 1440) {
+                this.navContainer.setAttribute('aria-hidden', 'false');
+                this.navContainer.removeAttribute('inert');
+            } else {
+                this.burgerMenuCheckbox.checked = false;
+                this.navContainer.setAttribute('aria-hidden', 'true');
+                this.navContainer.setAttribute('inert', '');
+            }
         },
 
         handleAccessibility() {
@@ -25,9 +35,7 @@ import {settings as s} from "../settings";
                 if (e.currentTarget.checked) {
                     this.navContainer.removeAttribute('inert');
                 } else {
-
                     this.navContainer.setAttribute('inert', '');
-
                 }
             });
         },
