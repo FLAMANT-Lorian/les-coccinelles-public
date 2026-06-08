@@ -21,5 +21,5 @@ jobs:
         run: |
           ssh forge@${{ secrets.SERVER_IP }} "
           cd /home/forge/les-coccinelles.on-forge.com &&
-          bash deploy.sh
+          git pull origin main
           "
