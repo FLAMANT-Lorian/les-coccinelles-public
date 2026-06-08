@@ -33,7 +33,7 @@ $facebook = $social_networks['facebook'];
                             <a href="<?= $access_plan ?>"
                                target="_blank"
                                title="Vers le plan d’accès"
-                               class="flex flex-row items-center gap-4 opacity-70 hover:opacity-100 trans-all">
+                               class="flex flex-row items-center gap-4 opacity-80 hover:opacity-100 trans-all">
                                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
                                      xmlns="http://www.w3.org/2000/svg">
                                     <use xlink:href="#map"></use>
@@ -42,7 +42,7 @@ $facebook = $social_networks['facebook'];
                             </a>
                         </li>
                     <?php else: ?>
-                        <li class="text-white flex flex-row items-center gap-4 opacity-70 ">
+                        <li class="text-white flex flex-row items-center gap-4 opacity-80 ">
                             <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
                                  xmlns="http://www.w3.org/2000/svg">
                                 <use xlink:href="#map"></use>
@@ -56,7 +56,7 @@ $facebook = $social_networks['facebook'];
                         <a href="tel:<?= str_replace([' ', '(0)'], '', $phone) ?>"
                            target="_blank"
                            title="Téléphoner au : <?= $phone ?>"
-                           class="flex flex-row items-center gap-4 opacity-70 hover:opacity-100 trans-all">
+                           class="flex flex-row items-center gap-4 opacity-80 hover:opacity-100 trans-all">
                             <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
                                  xmlns="http://www.w3.org/2000/svg">
                                 <use xlink:href="#phone"></use>
@@ -70,7 +70,7 @@ $facebook = $social_networks['facebook'];
                         <a href="mailto:<?= $email ?>"
                            target="_blank"
                            title="Envoyer un mail à : <?= $email ?>"
-                           class="flex flex-row items-center gap-4 opacity-70 hover:opacity-100 trans-all">
+                           class="flex flex-row items-center gap-4 opacity-80 hover:opacity-100 trans-all">
                             <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
                                  xmlns="http://www.w3.org/2000/svg">
                                 <use xlink:href="#email"></use>
@@ -102,7 +102,7 @@ $facebook = $social_networks['facebook'];
             <?php if ($facebook || $instagram): ?>
                 <ul class="flex flex-row max-md:justify-center lg:justify-end gap-6">
                     <?php if ($facebook): ?>
-                        <li class="text-white opacity-70 hover:opacity-100 trans-all">
+                        <li class="text-white opacity-80 hover:opacity-100 trans-all">
                             <a href="<?= $facebook ?>"
                                target="_blank"
                                aria-label="Vers le compte Facebook de l’asbl"
@@ -117,7 +117,7 @@ $facebook = $social_networks['facebook'];
                         </li>
                     <?php endif; ?>
                     <?php if ($instagram): ?>
-                        <li class="text-white opacity-70 hover:opacity-100 trans-all">
+                        <li class="text-white opacity-80 hover:opacity-100 trans-all">
                             <a href="<?= $instagram ?>"
                                target="_blank"
                                aria-label="Vers le compte Instagram de l’asbl"
@@ -134,14 +134,14 @@ $facebook = $social_networks['facebook'];
                 </ul>
             <?php endif; ?>
         </div>
-        <div class="col-span-4 md:col-span-8 lg:col-span-12 flex flex-col md:flex-row md:justify-between gap-5 justify-center items-center pt-4 border-t border-t-white/70">
-            <span class="paragraph text-white opacity-70">© ASBL Les Coccinelles <?= date('Y') ?></span>
+        <div class="col-span-4 md:col-span-8 lg:col-span-12 flex flex-col md:flex-row md:justify-between gap-5 justify-center items-center pt-4 border-t border-t-white/80">
+            <span class="paragraph text-white opacity-80">© ASBL Les Coccinelles <?= date('Y') ?></span>
             <div class="flex flex-row items-center gap-2 paragraph">
-                <span class="text-white opacity-70">Site réalisé par</span>
+                <span class="text-white opacity-80">Site réalisé par</span>
                 <a aria-label="Vers le site web de Lorian Flamant"
                    title="Vers le site web de Lorian Flamant"
                    target="_blank"
-                   class="text-white font-semibold opacity-70 hover:opacity-100 trans-all"
+                   class="text-white font-semibold opacity-80 hover:opacity-100 trans-all"
                    href="https://lorianflamant.com">
                     Lorian Flamant
                 </a>
