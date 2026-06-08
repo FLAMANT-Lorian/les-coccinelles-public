@@ -49,7 +49,7 @@ $calendar_title = $form['calendar-title'];
                                     <use href="#map"></use>
                                 </svg>
                                 <div class="flex flex-col justify-start gap-2">
-                                    <span itemprop="address" class="paragraph"><?= $address ?></span>
+                                    <span itemprop="address" class="paragraph text-black/80"><?= $address ?></span>
                                     <?php if ($access_plan): ?>
                                         <a href="<?= $access_plan ?>"
                                            aria-label="Plan d’accès"
@@ -71,7 +71,7 @@ $calendar_title = $form['calendar-title'];
                                          xmlns="http://www.w3.org/2000/svg">
                                         <use href="#email"></use>
                                     </svg>
-                                    <span itemprop="email" class="paragraph trans-all"><?= $email ?></span>
+                                    <span itemprop="email" class="paragraph text-black/80 trans-all"><?= $email ?></span>
                                 </a>
                             </li>
                         <?php endif; ?>
@@ -85,7 +85,7 @@ $calendar_title = $form['calendar-title'];
                                          xmlns="http://www.w3.org/2000/svg">
                                         <use href="#phone"></use>
                                     </svg>
-                                    <span itemprop="telephone" class="paragraph trans-all"><?= $phone ?></span>
+                                    <span itemprop="telephone" class="paragraph text-black/80 trans-all"><?= $phone ?></span>
                                 </a>
                             </li>
                         <?php endif; ?>

@@ -121,7 +121,7 @@ if ($success && $token) {
         <div class="acceptance-field relative">
             <input type="checkbox" id="acceptance" name="acceptance" class="cursor-pointer"
                    <?php if ($values->acceptance ?? false): ?>checked<?php endif; ?>>
-            <label for="acceptance" class="cursor-pointer">J’accepte que mes données soient utilisées
+            <label for="acceptance" class="cursor-pointer text-black/80!">J’accepte que mes données soient utilisées
                 pour me recontacter et me
                 tenir informé(e) des actualités et événements. Elles resteront confidentielles et ne
                 seront jamais partagées à des tiers.</label>

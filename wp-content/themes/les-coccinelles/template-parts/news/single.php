@@ -11,7 +11,8 @@ $images = get_field('images');
     <div class="max-width-screen px-default py-default grid-default gap-y-8">
         <div class="col-span-full md:col-span-4 lg:col-span-5 flex flex-col gap-y-4">
             <?php if ($title): ?>
-                <h1 data-text-reveal data-dir="top" class="text-2.5xl lg:text-4.5xl leading-9 lg:leading-11 font-medium text-brown">
+                <h1 data-text-reveal data-dir="top"
+                    class="text-2.5xl lg:text-4.5xl leading-9 lg:leading-11 font-medium text-brown">
                     <span class="mask-content">
                         <?= $title ?>
                     </span>
@@ -48,7 +49,7 @@ $images = get_field('images');
                     
                     ?>
                     <a href="<?= $image['url'] ?>"
-                       aria-label="Voir l’image en grand"
+                       aria-label="Voir l’image <?= $index ?> en grand"
                        title="Voir l’image en grand"
                        class="<?= $index > 4 ? 'hidden' : $classes[$index] ?> "
                        data-fancybox="single-news">
@@ -56,6 +57,7 @@ $images = get_field('images');
                                 'class' => 'max-lg:aspect-square object-cover h-full w-full',
                                 'alt' => $image['alt']
                         ]); ?>
+                        <span class="sr-only">Voir l’image <?= $index ?> en grand</span>
                     </a>
                 <?php endforeach; ?>
             </div>
