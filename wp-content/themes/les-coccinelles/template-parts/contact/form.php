@@ -34,7 +34,7 @@ $access_plan = $contact['access-plan'];
         <section class="col-span-full grid grid-default max-lg:divide-y max-lg:divide-beige-dark/60">
             <div class="relative form col-span-full rl:col-start-2 rl:col-span-6 lg:col-start-1 lg:col-span-7 max-lg:pb-8">
                 <h2 class="sr-only">Formulaire de contact</h2>
-                <p class="paragraph mb-6">Les champs renseignés avec <strong class="text-red">*</strong> sont requis !
+                <p class="paragraph text-black/80 mb-6">Les champs renseignés avec <strong class="text-red">*</strong> sont requis !
                 </p>
                     <?php get_template_part('template-parts/forms/fieldset', args: [
                             'hidden_input_type' => 'contact'
@@ -68,7 +68,7 @@ $access_plan = $contact['access-plan'];
                                            aria-label="Plan d’accès"
                                            title="Voir le plan d'accès"
                                            target="_blank">
-                                            <span class="paragraph text-blue-500! underline hover:text-blue-800! focus:text-blue-800! trans-all">Plan d’accès</span>
+                                            <span class="paragraph text-blue-700! underline hover:text-blue-800! focus:text-blue-800! trans-all">Plan d’accès</span>
                                         </a>
                                     <?php endif; ?>
                                 </div>

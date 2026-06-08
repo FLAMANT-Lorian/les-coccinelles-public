@@ -21,6 +21,13 @@ import {settings as s} from "../settings";
             this.burgerMenuCheckbox.addEventListener('change', e => {
                 let ariaHiddenAttr = !e.currentTarget.checked;
                 this.navContainer.setAttribute('aria-hidden', ariaHiddenAttr.toString());
+                if (e.currentTarget.checked) {
+                    this.navContainer.removeAttribute('inert');
+                } else {
+
+                    this.navContainer.setAttribute('inert', '');
+
+                }
             });
         },
         closeMenuOnEscape() {
