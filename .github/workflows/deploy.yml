@@ -12,7 +12,5 @@ jobs:
 
     steps:
       # Trigger Laravel Forge Deploy
-      - name: Deploy
-        uses: jbrooksuk/laravel-forge-action@v1.0.2
-        with:
-          trigger_url: ${{ secrets.FORGE_DEPLOY_HOOK }}
+      - name: Debug secret length
+        run: echo "${{ secrets.FORGE_DEPLOY_HOOK }}" | wc -c
