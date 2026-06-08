@@ -1,0 +1,17 @@
+footer {
+    h3 {
+        @apply text-xl md:text-2xl font-medium text-white max-md:text-center pb-6;
+    }
+}
+
+.footer-nav {
+    @apply flex flex-col;
+
+    .menu-item {
+        @apply paragraph opacity-60 hover:opacity-100 focus-within:opacity-100 trans-all text-white;
+
+        &.current-menu-item {
+            @apply opacity-100 font-semibold;
+        }
+    }
+}

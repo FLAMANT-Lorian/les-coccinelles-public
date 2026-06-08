@@ -1,0 +1,129 @@
+.burger-menu-label {
+    @apply flex flex-col gap-2.5 cursor-pointer lg:hidden;
+
+    .line {
+        @apply inline-block w-14 bg-brown h-px trans-all origin-center;
+    }
+}
+
+.nav-container {
+    @apply max-lg:-translate-y-full max-lg:opacity-0 trans-all;
+}
+
+.header-menu:has(.burger-menu-input:checked) {
+    @apply bg-beige-medium trans-all;
+
+    .burger-menu-label {
+
+        .line-1 {
+            @apply translate-y-2.75 rotate-45;
+        }
+
+        .line-2 {
+            @apply scale-x-0;
+        }
+
+        .line-3 {
+            @apply -translate-y-2.75 -rotate-45;
+        }
+    }
+
+    & ~ .nav-container {
+        @apply translate-y-0 opacity-100;
+    }
+}
+
+.primary-nav {
+    @apply flex flex-col gap-7.5 lg:flex-row lg:gap-8 justify-center items-center grow;
+
+    .menu-item {
+        @apply relative text-brown text-3xl lg:text-xl font-medium;
+
+        a {
+            @apply px-2 py-1 relative trans-all;
+
+            &:after {
+                @apply content-[''] w-1/4 h-0.5 bg-red absolute -bottom-0.5 left-1/2 -translate-x-1/2 scale-x-0 trans-all;
+            }
+
+            &:hover, &:focus {
+                @apply text-red;
+
+                &:after {
+                    @apply scale-x-100;
+                }
+            }
+        }
+
+        &.current-menu-item {
+            @apply text-red;
+
+            a:after {
+                @apply scale-x-100;
+            }
+        }
+    }
+}
+
+@media (max-width: 1440px) {
+
+    .header-menu:has(.burger-menu-input:not(:checked)) .primary-nav {
+        .menu-item a {
+            @apply opacity-0 animate-none;
+        }
+    }
+
+    .header-menu:has(.burger-menu-input:checked) .primary-nav {
+
+        .menu-item a {
+            @apply opacity-100 duration-300 ease-in-out;
+            animation: animate-menu-item;
+        }
+
+        .menu-item:nth-of-type(1) a {
+            @apply delay-120;
+        }
+
+        .menu-item:nth-of-type(2) a {
+            @apply delay-180;
+        }
+
+        .menu-item:nth-of-type(3) a {
+            @apply delay-240;
+        }
+
+        .menu-item:nth-of-type(4) a {
+            @apply delay-300;
+        }
+
+        .menu-item:nth-of-type(5) a {
+            @apply delay-360;
+        }
+
+        .menu-item:nth-of-type(6) a {
+            @apply delay-420;
+        }
+
+        .menu-item:nth-of-type(7) a {
+            @apply delay-480;
+        }
+
+        .menu-item:nth-of-type(8) a {
+            @apply delay-540;
+        }
+
+        .menu-item:nth-of-type(9) a {
+            @apply delay-600;
+        }
+    }
+
+    @keyframes animate-menu-item {
+        from {
+            opacity: 0;
+        }
+
+        to {
+            opacity: 1;
+        }
+    }
+}

@@ -1,0 +1,54 @@
+.events-card {
+
+    .more-text {
+        @apply flex flex-row items-center;
+
+        &:before {
+            @apply inline-block content-[''] w-0 h-0.5 bg-red trans-all;
+        }
+    }
+
+    &:has(a:hover),
+    &:has(a:focus) {
+        .more-text:before {
+            @apply mr-2 w-4;
+        }
+
+        img {
+            @apply scale-110;
+        }
+
+    }
+}
+
+.event-content {
+    @apply paragraph;
+
+    ul {
+        @apply flex flex-col gap-2;
+
+        li {
+            @apply flex flex-row gap-2;
+
+            &:before {
+                @apply content-[''] mt-2 max-w-1.5 max-h-1.5 min-w-1.5 min-h-1.5 inline-block bg-red rounded-full;
+            }
+        }
+    }
+}
+
+.coordinate-event {
+    @apply flex flex-col md:flex-row md:justify-between rg:flex-col rg:justify-start gap-8 rg:gap-15;
+
+    h3 {
+        @apply text-2xl font-medium text-brown pb-4;
+    }
+
+    li, a {
+        @apply flex flex-row items-center gap-2 paragraph;
+    }
+
+    a {
+        @apply hover:text-red focus:text-red trans-all;
+    }
+}

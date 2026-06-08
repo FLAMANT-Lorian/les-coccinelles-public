@@ -1,0 +1,13 @@
+.rgpd-content {
+    h3 {
+        @apply text-xl rg:text-2xl font-medium mb-3 text-red;
+    }
+
+    p {
+        @apply paragraph mb-8;
+    }
+
+    a {
+        @apply text-red hover:underline focus:underline;
+    }
+}

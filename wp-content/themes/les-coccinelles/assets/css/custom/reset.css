@@ -1,0 +1,47 @@
+* {
+    @apply font-family-mona-sans;
+}
+
+.dots {
+    @apply flex items-center justify-center gap-4;
+
+    .dot {
+        @apply w-4 h-2.5 bg-beige-dark/60;
+
+        &.active {
+            @apply bg-red;
+        }
+    }
+}
+
+.slider-track::-webkit-scrollbar {
+    @apply hidden;
+}
+
+body:has(.burger-menu-input:checked) {
+    @apply overflow-hidden;
+}
+
+ul.page-numbers {
+    @apply flex flex-row col-span-full justify-center gap-6 mt-6;
+
+    .page-numbers {
+        @apply px-4 text-brown border border-red h-10  flex justify-center items-center trans-all;
+
+        &:hover, &:focus, &.current {
+            @apply bg-red text-white;
+        }
+    }
+
+    a, span {
+        @apply w-10;
+    }
+
+    .next, .prev {
+        @apply w-fit;
+    }
+}
+
+.no-post-found {
+    @apply col-span-full justify-self-center text-lg;
+}

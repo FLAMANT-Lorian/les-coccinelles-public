@@ -1,0 +1,22 @@
+.news-card {
+
+    .more-text {
+        @apply flex flex-row items-center;
+
+        &:before {
+            @apply inline-block content-[''] w-0 h-0.5 bg-red trans-all;
+        }
+    }
+
+    &:has(a:hover),
+    &:has(a:focus) {
+        .more-text:before {
+            @apply mr-2 w-4;
+        }
+
+        img {
+            @apply scale-110;
+        }
+
+    }
+}

@@ -1,0 +1,65 @@
+.field {
+    @apply relative;
+}
+.error {
+    @apply text-red absolute -bottom-6;
+}
+
+.search-input {
+    @apply w-64 pl-14 relative trans-all;
+
+    &:hover,
+    &:focus {
+        @apply outline outline-brown;
+    }
+
+    & ~ svg {
+        @apply text-beige-dark trans-all;
+    }
+
+    &:focus ~ svg {
+        @apply text-brown;
+    }
+}
+
+input, textarea, select {
+    @apply py-3 px-4 outline outline-beige-dark text-brown trans-all;
+
+    &::placeholder {
+        @apply text-beige-dark;
+    }
+
+    &:focus {
+        @apply outline-brown outline;
+    }
+}
+
+textarea {
+    @apply h-50 resize-none;
+}
+
+.acceptance-field {
+    @apply flex flex-row;
+
+    &:has(input:checked) label, &:has(input:hover) label, &:has(input:focus) label {
+        @apply text-brown;
+    }
+
+    label {
+        @apply pl-2 paragraph hover:text-brown;
+    }
+
+    input {
+        @apply mt-1 appearance-none min-w-4 min-h-4 max-w-4 max-h-4 border border-red outline-none hover:bg-red/50 focus:bg-red/50 trans-all p-0;
+
+        &:checked {
+            @apply bg-red;
+        }
+    }
+}
+
+.form {
+    [disabled] {
+        @apply cursor-not-allowed opacity-50;
+    }
+}

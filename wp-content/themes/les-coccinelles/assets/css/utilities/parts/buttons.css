@@ -1,0 +1,82 @@
+/* BUTTON */
+@utility btn {
+    @apply text-brown text-lg uppercase font-normal px-4 rg:px-6 py-3 rg:py-4 trans-all;
+}
+
+@utility btn-primary-outlined {
+    @apply btn border border-red flex flex-row items-center gap-4;
+
+    &:after {
+        @apply content-[''] mask-[url('/wp-content/themes/les-coccinelles/assets/img/svgs/arrow.svg')] mask-no-repeat mask-center h-3.25 w-7 mask-contain inline-block bg-brown trans-all;
+    }
+
+    &:hover, &:focus {
+        @apply bg-red text-white;
+
+        &:after {
+            @apply bg-white;
+        }
+    }
+}
+
+@utility btn-primary-filled {
+    @apply btn border border-red bg-red text-white flex flex-row items-center gap-4;
+
+    &:after {
+        @apply content-[''] mask-[url('/wp-content/themes/les-coccinelles/assets/img/svgs/arrow.svg')] mask-no-repeat mask-center h-3.25 w-7 mask-contain inline-block bg-white trans-all;
+    }
+
+    &:hover, &:focus {
+        @apply bg-transparent text-brown;
+
+        &:after {
+            @apply bg-brown;
+        }
+    }
+}
+
+@utility btn-back-filled {
+    @apply btn border border-red bg-red text-white flex flex-row items-center gap-4;
+
+    &:before {
+        @apply content-[''] mask-[url('/wp-content/themes/les-coccinelles/assets/img/svgs/arrow.svg')] mask-no-repeat rotate-180 mask-center h-3.25 w-7 mask-contain inline-block bg-white trans-all;
+    }
+
+    &:hover, &:focus {
+        @apply bg-transparent text-brown;
+
+        &:before {
+            @apply bg-brown;
+        }
+    }
+}
+
+@utility btn-services {
+    @apply btn bg-red text-white flex flex-row items-center gap-4;
+
+    &:hover, &:focus {
+        &:after {
+            @apply rotate-0;
+        }
+    }
+
+    &:after {
+        @apply -rotate-45 content-[''] mask-[url('/wp-content/themes/les-coccinelles/assets/img/svgs/arrow.svg')] mask-no-repeat mask-center h-3.25 w-7 mask-contain inline-block bg-white trans-all;
+    }
+}
+
+@utility btn-cta {
+    @apply btn border border-white bg-white text-brown flex flex-row items-center gap-4;
+
+    &:after {
+        @apply content-[''] mask-[url('/wp-content/themes/les-coccinelles/assets/img/svgs/arrow.svg')] mask-no-repeat mask-center h-3.25 w-7 mask-contain inline-block bg-brown trans-all;
+    }
+
+    &:hover, &:focus {
+        @apply bg-transparent text-white;
+
+        &:after {
+            @apply bg-white;
+        }
+    }
+}
