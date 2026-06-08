@@ -1,4 +1,4 @@
-name: 'Deploy on push'
+name: Deploy to Forge
 
 on:
   push:
@@ -6,11 +6,9 @@ on:
       - main
 
 jobs:
-  forge-deploy:
-    name: 'Laravel Forge Deploy'
+  deploy:
     runs-on: ubuntu-latest
 
     steps:
-      # Trigger Laravel Forge Deploy
-      - name: Debug secret length
-        run: echo "${{ secrets.FORGE_DEPLOY_HOOK }}" | wc -c
+      - name: Trigger Forge Deploy
+        run: curl -f "${{ secrets.FORGE_DEPLOY_HOOK }}"
