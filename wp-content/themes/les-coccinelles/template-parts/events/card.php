@@ -32,7 +32,7 @@ $facebook_link = get_field('facebook-link');
                    itemprop="url"
                    aria-label="Voir l’événement sur Facebook"
                    title="Voir l’événement sur Facebook"
-                   class="text-red relative z-2 hover:text-brown focus:text-brown trans-all"
+                   class="text-red relative z-2 hover:text-brown focus:text-brown trans-all py-1 px-2"
                    target="_blank">
                     <span itemprop="sameAs" class="sr-only">Voir l’événement sur Facebook</span>
                     <svg width="14" height="24" class="h-4.5" viewBox="0 0 14 24" fill="none"
