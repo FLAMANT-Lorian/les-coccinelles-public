@@ -15,6 +15,7 @@ import {settings as s} from "../settings";
 
         setup() {
             this.navContainer.setAttribute('aria-hidden', 'true');
+            this.navContainer.setAttribute('inert', '');
         },
 
         handleAccessibility() {
