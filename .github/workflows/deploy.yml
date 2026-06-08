@@ -20,6 +20,7 @@ jobs:
       - name: Deploy
         run: |
           ssh forge@${{ secrets.SERVER_IP }} "
+          git config --global --add safe.directory /home/forge/les-coccinelles.on-forge.com &&
           cd /home/forge/les-coccinelles.on-forge.com &&
           git pull origin main
           "
